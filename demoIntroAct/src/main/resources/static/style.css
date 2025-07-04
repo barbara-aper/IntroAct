@@ -1,0 +1,37 @@
+/** importa a fonte bold e normal*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-color: #012135;
+}
+
+p {
+    color: white;
+}
+
+/* background da navbar */
+.navbar {
+    background-color: #094870 !important;
+}
+
+/* introact */
+.navbar-brand {
+    color: #EB7A29 !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* palavras da navbar */
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: #f8f9fa !important;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+/*  qnd passa o mouse em cima dos links (palavras) */
+.nav-link:hover {
+    color: #EB7A29 !important;
+}
+
