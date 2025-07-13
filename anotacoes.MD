@@ -3,6 +3,7 @@
 2. [Doc do projeto](https://docs.google.com/document/d/1AbIpTwdoQhO9LcvEFK6X2nOIlPTqKL4j0UVvDhPbMDU/edit?tab=t.0)
 3. [Auxilio com bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 4. [Github do projeto](https://github.com/barbara-aper/IntroAct)
+4. [Página local de testes](http://localhost:8080/)
 
 # Ativades:
 1. Diagrama de classes do domínio do problema;
