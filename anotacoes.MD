@@ -35,7 +35,7 @@ Framework:
 - Thymeleaf
 
 Documentação:
-- 
+- JavaDoc
 
 Executar:
 - Rodar o arquivo DemoApplication.java em /demoIntroAct/src/main/java/com/example/demo/ e abrir o link http://localhost:8080/
