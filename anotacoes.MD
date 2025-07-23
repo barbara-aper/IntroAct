@@ -11,9 +11,31 @@
 3. Frameworks reutilizados;
 4. Como gerar a documentação do código (ex.: JavaDoc);
 5. Como executar o sistema.
+6. Documente o seu projeto no README do repositório do projeto utilizando MarkDown.
 
 # Brainstorm:
 Classes: 
-- Questão (com herança para questões discursivas e objetivas) (id, enunciado, resposta, tema, tipo, alternativas)
+- Questão (com tratamento para questões discursivas e objetivas) (id, enunciado, resposta, tema, tipo [enum], alternativas, nivel de dificuldade)
 - Atividade (conjunto de questões) (lista de questões, tema)
 - Tema (contempla a explicação e a atividade de um mesmo tópico) (nome do tema, atividade, resumo do conteúdo)
+- Comparator (compara a resposta enviada com a resposta correta)
+- Classe do get e do post
+- Classes do thymeleaf e outros
+
+Ferramentas escolhidas:
+- Git/GitHub
+- Build: Spring Boot e Maven
+- Testes: 
+- Issue tracking: 
+- CI/CD: 
+
+Framework:
+- Spring
+- Bootstrap
+- Thymeleaf
+
+Documentação:
+- 
+
+Executar:
+- Rodar o arquivo DemoApplication.java em /demoIntroAct/src/main/java/com/example/demo/ e abrir o link http://localhost:8080/
