@@ -5,7 +5,13 @@
 4. [Github do projeto](https://github.com/barbara-aper/IntroAct)
 4. [Página local de testes](http://localhost:8080/)
 
-# Ativades:
+# Brainstorm:
+Classes: 
+- Questão (com herança para questões discursivas e objetivas) (id, enunciado, resposta, tema, tipo, alternativas)
+- Atividade (conjunto de questões) (lista de questões, tema)
+- Tema (contempla a explicação e a atividade de um mesmo tópico) (nome do tema, atividade, resumo do conteúdo)
+
+# Atividades:
 1. Diagrama de classes do domínio do problema;
 2. Ferramentas escolhidas (Git, build, testes, issue tracking, CI/CD, container);
 3. Frameworks reutilizados;
