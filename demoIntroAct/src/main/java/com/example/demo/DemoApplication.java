@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,14 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class DemoApplication {
-	// @Autowired
-	// private ThemeRepository themeRepository;
-
 	// http://localhost:8080/
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+	@Autowired
+	private ThemeRepository themeRepository;
 	/**
 	 * Temos que ver sobre esses endpoints e em que momento cada coisa será salva/requisitada
 	 * porque, por exemplo, obter TODOS os conteudos de todos os temas, independente de qual 
@@ -31,7 +31,7 @@ public class DemoApplication {
 	 */
 	@PostMapping("/post")
 	public void salvaTemas(@RequestBody Tema tema) {
-		/** to do */
+		themeRepository.save(tema);
 	}
 
 	/** a principio, penso em trocar o /get por /atividades e haver, para cada atividade, um 
@@ -42,6 +42,6 @@ public class DemoApplication {
 	@GetMapping("/get")
 	public Iterable<Tema> obtemTema() {
 		/** to do */
-		return null;
+		return themeRepository.findAll();
 	}
 }

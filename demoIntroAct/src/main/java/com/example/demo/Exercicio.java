@@ -2,20 +2,32 @@ package com.example.demo;
 
 import java.util.List;
 
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Exercicio {
-    private String id;
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String idExercicio;
     private String enunciado;
     private Dificuldade dificuldade;
     private Tipo tipo;
+    @ElementCollection
     private List<String> alternativas;
+    @ElementCollection
     private List<String> gabarito;
     
     /**
      * Obtem o id do exercício
      * @return o id do exercício
      */
-    public String getId() {
-        return id;
+    public String getIdExercicio() {
+        return idExercicio;
     }
 
     /**
