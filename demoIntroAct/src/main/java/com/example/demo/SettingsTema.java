@@ -6,4 +6,4 @@ import java.util.List;
  * ver comentarios de DemoApplication.java
  */
 
-public record Settings( List<Tema> temas ) { }
+public record SettingsTema(String nome, String descricao, List<SettingsAtividade> atividades) { }

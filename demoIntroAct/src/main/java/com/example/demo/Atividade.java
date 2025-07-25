@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Atividade {
     private List<Exercicio> exercicios;
-    private Tema tema;
+    private String tema;
     
     /**
      * Obtem todos os exercícios existentes na atividade
@@ -18,7 +18,7 @@ public class Atividade {
      * Obtem o tema da sessão de atividades
      * @return o tema da sessão de atividade
      */
-    public Tema getTema() {
+    public String getTema() {
         return tema;
     }
 }
