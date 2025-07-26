@@ -2,6 +2,7 @@ package com.example.demo;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +16,7 @@ public class Tema {
     
     private String nome;
     private String descricao;
-    @OneToMany
+    @OneToMany(cascade=CascadeType.PERSIST)
     private List<Atividade> atividades;
     
     /**

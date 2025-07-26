@@ -14,6 +14,11 @@ p {
     background-color: #094870 !important;
 }
 
+/* bloco com tds os txt da navbar */
+.navbar-nav {
+    margin: auto;
+    width: 50%
+}
 /* introact */
 .navbar-brand {
     color: #EB7A29 !important;

@@ -1,15 +1,13 @@
 {
-    "id" : 1.0,
     "nome" : "Lógica Boolena",
     "descricao" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
     "atividades" : [
         {
-            "id" : 2.0,
             "exercicios" : [
                 {
-                    "id" : 3.0,
                     "idExercicio" : 4,
                     "enunciado" : "Lógica Boleana",
+                    "dificuldade" : 0,
                     "tipo" : 0,
                     "alternativas" : [],
                     "gabarito" : []
