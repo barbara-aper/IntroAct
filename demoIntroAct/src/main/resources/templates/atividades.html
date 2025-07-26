@@ -25,6 +25,10 @@
 
     <p> Este é o atividades.html </p>
 
+    <tr th:each="tema: ${temas}">
+        <td th:text = "${tema.nome}"></td> 
+    </tr>
+
 </body>
 
 </html>
