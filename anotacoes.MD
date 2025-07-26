@@ -36,6 +36,18 @@ Framework:
 
 Documentação:
 - JavaDoc
+```
+Rayssa:
+pra gerar o javadoc, é mvn javadoc:javadoc
+para ver, tem que abrir no navegador o index.html em:
+    demoIntroAct/target/site/apidocs/index.html
+``` 
 
 Executar:
+```
+Rayssa: so p freezar sobre o comando de executar e dependencia
+1. acredito q precise lembrar/tratar em instalar o maven ou algo assim
+2. para rodar, usar o comando: mvn spring-boot:run 
+```
+
 - Rodar o arquivo DemoApplication.java em /demoIntroAct/src/main/java/com/example/demo/ e abrir o link http://localhost:8080/

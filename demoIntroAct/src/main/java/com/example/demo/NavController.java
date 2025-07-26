@@ -21,7 +21,7 @@ public class NavController {
 
     @GetMapping("/atividades")
     public String atividades(Model model) {
-        List<Tema> temas = (List<Tema>) this.themeService.obtemTema();
+        List<Tema> temas = (List<Tema>) this.themeService.obtemTemas();
         model.addAttribute("temas", temas);
         return "atividades"; // carrega templates/atividades.html
     }

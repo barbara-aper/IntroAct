@@ -21,10 +21,18 @@ public class Exercicio {
     private List<String> alternativas;
     @ElementCollection
     private List<String> gabarito;
+
+    /**
+     * Obtem o id de um objeto especifico exercicio
+     * @return o id do objeto
+     */
+    public Long getId() {
+        return id;
+    }
     
     /**
      * Obtem o id do exercício
-     * @return o id do exercício
+     * @return o id do exercício 
      */
     public String getIdExercicio() {
         return idExercicio;

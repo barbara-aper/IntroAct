@@ -24,7 +24,7 @@ public class ThemeService {
 	}
 
 	@GetMapping("/get")
-	public List<Tema> obtemTema() {
+	public List<Tema> obtemTemas() {
 		return (List<Tema>) themeRepository.findAll();
 	}
 }

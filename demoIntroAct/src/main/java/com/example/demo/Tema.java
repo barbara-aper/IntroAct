@@ -16,8 +16,17 @@ public class Tema {
     
     private String nome;
     private String descricao;
+    
     @OneToMany(cascade=CascadeType.PERSIST)
     private List<Atividade> atividades;
+
+    /**
+     * Obtem o id de um objeto especifico tema
+     * @return o id do objeto
+     */
+    public Long getId() {
+        return id;
+    }
     
     /**
      * Obtem o nome do tema

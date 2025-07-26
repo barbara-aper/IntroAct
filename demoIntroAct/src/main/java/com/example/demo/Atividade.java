@@ -17,6 +17,14 @@ public class Atividade {
     @OneToMany(cascade=CascadeType.PERSIST)
     private List<Exercicio> exercicios;
     private String tema;
+
+    /**
+     * Obtem o id de um objeto especifico atividade
+     * @return o id do objeto
+     */
+    public Long getId() {
+        return id;
+    }
     
     /**
      * Obtem todos os exercícios existentes na atividade
