@@ -40,4 +40,18 @@ demoIntroAct/target/site/apidocs/index.html
 ```
 
 ## Como executar o sistema
+### Requisito
+Instalar o Maven (ACRESCENTAR COMO INSTALAR)
+### Instruções de Execução
+1. Clone o repositório:
+git clone <URL_DO_REPOSITORIO>
+2. Execute:
+mvn spring-boot:run 
+3. Abra o server no seu navegador com o link para a porta 8080:
+http://localhost:8080/
+
+(ACRESCENTAR POST?)
+
+(NÃO É ASSIM?)
+
 - Rodar o arquivo DemoApplication.java em /demoIntroAct/src/main/java/com/example/demo/ e abrir o link http://localhost:8080/
