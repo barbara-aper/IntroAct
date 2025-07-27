@@ -28,7 +28,16 @@ O IntroAct disponibiliza exercícios curtos e objetivos em Python, para tornar o
 - Thymeleaf
 
 ## Como gerar a documentação do código
-- JavaDoc
+- JavaDoc:
+
+Execute o comando
+```
+mvn javadoc:javadoc
+```
+Depois, para visualizá-lo, abra
+```
+demoIntroAct/target/site/apidocs/index.html
+```
 
 ## Como executar o sistema
 - Rodar o arquivo DemoApplication.java em /demoIntroAct/src/main/java/com/example/demo/ e abrir o link http://localhost:8080/
