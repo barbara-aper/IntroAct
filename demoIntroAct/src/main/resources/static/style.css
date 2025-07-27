@@ -1,6 +1,13 @@
 /** importa a fonte bold e normal*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+:root {
+  --dark-blue: #012135;
+  --medium-blue:  #094870;
+  --orange: #EB7A29;
+  --white: #f8f9fa;
+}
+
 body {
     background-color: #012135;
 }
@@ -42,4 +49,26 @@ p {
 
 .nome-tema {
     color: #eb29cb !important
+}
+
+/* AJEITAR DAQ PRA CIMA*/
+.home-container {
+    padding: 5%;
+}
+
+.small-btn{
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: var(--medium-blue);
+    color: var(--white);
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.small-btn:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
 }
