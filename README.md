@@ -52,6 +52,6 @@ http://localhost:8080/
 
 (ACRESCENTAR POST?)
 
-(NÃO É ASSIM?)
+(NÃO É ASSIM IGUAL O COMANDO ABAIXO?)
 
 - Rodar o arquivo DemoApplication.java em /demoIntroAct/src/main/java/com/example/demo/ e abrir o link http://localhost:8080/
