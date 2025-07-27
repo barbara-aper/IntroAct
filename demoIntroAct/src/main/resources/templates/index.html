@@ -23,7 +23,20 @@
     <!-- nav bar -->
     <div th:replace="fragments/navbar :: navbar"></div>
 
-    <p> Este é o index.html </p>
+    <div class="container-fluid home-container">
+        <div class="row"> 
+            <div class="col-md-6">
+                <h1 style="color: var(--white)"> Venha exercitar sua <span style="color: var(--orange)"> programação </span> em Python! </h1>
+                <p> Nossas atividades foram projetadas para que seus conhecimentos não enferrujem</p>
+                <button class="small-btn">
+                    <label for=""> Começe agora </label>
+                </button>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid h-100" src="imagens\alunos.jpg" alt="OLA">
+            </div>
+        </div>
+    </div>
     
 </body>
 
