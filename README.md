@@ -14,16 +14,17 @@ O IntroAct disponibiliza exercícios curtos e objetivos em Python, para tornar o
 
 ## Diagrama de classes do domínio do problema
 [Link para o diagrama UML](https://lucid.app/lucidchart/e15a0e4a-b9d1-4d91-9ed9-484bec151f37/edit?viewport_loc=6%2C-346%2C2543%2C1395%2CHWEp-vi-RSFO&invitationId=inv_0ec62674-0150-4273-a4f9-12168637931c)
+ACRESCENTAR FOTO
 
 ## Ferramentas escolhidas
-- Git/GitHub
+- Git: Git e GitHub
 - Build: Spring Boot e Maven
 - Testes: 
 - Issue tracking: 
 - CI/CD:
 
 ## Frameworks reutilizados
-- Spring
+- Spring Boot
 - Bootstrap
 - Thymeleaf
 
