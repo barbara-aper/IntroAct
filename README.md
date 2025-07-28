@@ -52,10 +52,15 @@ sudo apt install maven
 ```
 ### Instruções de Execução
 1. Clone o repositório:
+```
 git clone <URL_DO_REPOSITORIO>
-2. Entrar na pasta demoIntroact (ALTERAR ESSE NOME)
-3. Execute:
-mvn spring-boot:run 
-4. Abra o server no seu navegador com o link para a porta 8080:
+```
+2. Execute:
+```
+mvn spring-boot:run
+```
+3. Abra o server no seu navegador com o link para a porta 8080:
+```
 http://localhost:8080/
+```
 
