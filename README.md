@@ -53,7 +53,7 @@ sudo apt install maven
 ### Instruções de Execução
 1. Clone o repositório:
 ```
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/barbara-aper/IntroAct.git
 ```
 2. Execute:
 ```
