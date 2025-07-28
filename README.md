@@ -30,7 +30,7 @@ ACRESCENTAR FOTO
 ## Como gerar a documentação do código
 - JavaDoc:
 
-Entrar na pasta demoIntroAct e execute o comando
+Execute o comando
 ```
 mvn javadoc:javadoc
 ```
@@ -41,7 +41,15 @@ demoIntroAct/target/site/apidocs/index.html
 
 ## Como executar o sistema
 ### Requisito
-Instalar o Maven (ACRESCENTAR COMO INSTALAR)
+Instalar o Maven:
+Baixe pelo site
+```
+https://maven.apache.org/download.cgi
+```
+Ou, se você tiver Ubuntu, execute o comando
+```
+sudo apt install maven
+```
 ### Instruções de Execução
 1. Clone o repositório:
 git clone <URL_DO_REPOSITORIO>
