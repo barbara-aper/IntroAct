@@ -30,7 +30,7 @@ ACRESCENTAR FOTO
 ## Como gerar a documentação do código
 - JavaDoc:
 
-Execute o comando
+Entrar na pasta demoIntroAct e execute o comando
 ```
 mvn javadoc:javadoc
 ```
@@ -45,13 +45,9 @@ Instalar o Maven (ACRESCENTAR COMO INSTALAR)
 ### Instruções de Execução
 1. Clone o repositório:
 git clone <URL_DO_REPOSITORIO>
-2. Execute:
+2. Entrar na pasta demoIntroact (ALTERAR ESSE NOME)
+3. Execute:
 mvn spring-boot:run 
-3. Abra o server no seu navegador com o link para a porta 8080:
+4. Abra o server no seu navegador com o link para a porta 8080:
 http://localhost:8080/
 
-(ACRESCENTAR POST?)
-
-(NÃO É ASSIM IGUAL O COMANDO ABAIXO?)
-
-- Rodar o arquivo DemoApplication.java em /demoIntroAct/src/main/java/com/example/demo/ e abrir o link http://localhost:8080/
