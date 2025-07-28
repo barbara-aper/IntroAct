@@ -20,7 +20,6 @@ ACRESCENTAR FOTO
 - Git: Git e GitHub
 - Build: Spring Boot e Maven
 - Testes: 
-- Issue tracking: 
 - CI/CD:
 
 ## Frameworks reutilizados
