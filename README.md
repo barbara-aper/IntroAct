@@ -34,7 +34,7 @@ Execute o comando
 ```
 mvn javadoc:javadoc
 ```
-Depois, para visualizá-lo, abra
+Depois, para visualizá-lo, abra o arquivo index.html
 ```
 demoIntroAct/target/site/apidocs/index.html
 ```
