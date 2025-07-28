@@ -21,7 +21,6 @@ O IntroAct disponibiliza exercícios curtos e objetivos em Python, para tornar o
 - Git: Git e GitHub
 - Build: Spring Boot e Maven
 - Testes: 
-- CI/CD:
 
 ## Frameworks reutilizados
 - Spring Boot
