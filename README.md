@@ -37,7 +37,7 @@ demoIntroAct/target/site/apidocs/index.html
 
 ## Como executar o sistema
 ### Requisito
-- Java
+- Java (versão 21)
 - Maven:
 
 Baixe pelo site
