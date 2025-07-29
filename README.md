@@ -23,18 +23,6 @@ O IntroAct disponibiliza exercícios curtos e objetivos em Python, para tornar o
 - Bootstrap
 - Thymeleaf
 
-## Como gerar a documentação do código
-- JavaDoc:
-
-Execute o comando abaixo dentro da pasta que contem o arquivo pom.xml
-```
-mvn javadoc:javadoc
-```
-Depois, para visualizar a documentação, abra o arquivo index.html
-```
-demoIntroAct/target/site/apidocs/index.html
-```
-
 ## Como executar o sistema
 ### Requisito
 - Java (versão 21)
@@ -64,6 +52,18 @@ mvn spring-boot:run
 4. Abra o server no seu navegador com o link para a porta 8080:
 ```
 http://localhost:8080/
+```
+
+## Como gerar a documentação do código
+- JavaDoc:
+
+Execute o comando abaixo dentro da pasta que contém o arquivo pom.xml
+```
+mvn javadoc:javadoc
+```
+Depois, para visualizar a documentação, abra o arquivo index.html
+```
+demoIntroAct/target/site/apidocs/index.html
 ```
 
 ## Links úteis
