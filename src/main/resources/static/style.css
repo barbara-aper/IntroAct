@@ -1,0 +1,84 @@
+/** importa a fonte bold e normal*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --super-dark-blue: #02273f;
+    --dark-blue: #064975;
+    --blue: #217da5;
+    --light-blue: #93c0d1; 
+    
+    --super-dark-yellow: #deb607;
+    --dark-yellow: #f4c708;
+    --yellow: #f7da59;
+    --light-yellow: #f7e077; 
+
+    --super-dark-orange: #c26018;
+    --dark-orange: #f07e24;
+    --orange: #ff9645;
+    --light-orange: #ffa35c; 
+
+    --white: #F8F9FA;
+}
+
+body {  
+    /* From Uiverse.io by adamgiebl */ 
+    width: 100%;
+    height: 100%;
+    --color: rgb(6, 73, 117, 0.2);
+    background-color: var(--super-dark-blue);
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+}
+
+p {
+    color: var(--white);
+}
+
+/* background da navbar */
+.navbar {
+    background-color : var(--dark-blue) !important;
+}
+
+/* bloco com tds os txt da navbar */
+.navbar-nav {
+    margin: auto;
+    width: 50%
+}
+/* introact */
+.navbar-brand {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* palavras da navbar */
+.nav-link {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: normal;
+    color: var(--white) !important;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--orange) !important;
+}
+.nav-link:active {
+    color: var(--orange) !important;
+}
+
+/* AJEITAR DAQ PRA CIMA*/
+.small-btn{
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.small-btn:hover {
+  background-color: var(--light-orange);
+  transform: scale(1.1);
+}
