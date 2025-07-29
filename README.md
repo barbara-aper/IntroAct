@@ -7,8 +7,6 @@ O IntroAct, Introcomp Activities, foi idealizado como uma plataforma de atividad
 O IntroAct disponibiliza exercícios curtos e objetivos em Python, para tornar o aprendizado constante. O objetivo é ser uma “revisão de bolso” que mantenha conhecimentos essenciais de programação frescos na mente do usuário a todo e qualquer momento que ele quiser, servindo como complemento de um curso mais intensivo, como o Introcomp. As atividades do IntroAct possuem perguntas de múltipla escolha, exercícios de correlação, escrita e preenchimento de lacunas sobre conceitos fundamentais da programação, como estruturas condicionais e loops.
 
 ## Diagrama de classes do domínio do problema
-[Link para o diagrama UML](https://lucid.app/lucidchart/e15a0e4a-b9d1-4d91-9ed9-484bec151f37/edit?viewport_loc=6%2C-346%2C2543%2C1395%2CHWEp-vi-RSFO&invitationId=inv_0ec62674-0150-4273-a4f9-12168637931c)
-
 ![Diagrama UML](UML.png)
 
 ## Ferramentas escolhidas
