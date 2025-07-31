@@ -23,23 +23,13 @@
     <!-- nav bar -->
     <div th:replace="fragments/navbar :: navbar"></div>
 
-    <div class="container-fluid p-5">
-        <div class="row"> 
-            <div class="col-md-7">
-                <h1 style="color: var(--white)"> Venha exercitar sua <span style="color: var(--orange)"> programação </span> em Python! </h1>
-                <p> Nossas atividades foram projetadas para que seus conhecimentos não enferrujem nunca</p>
-                <a th:href="@{/atividades}">
-                    <button class="small-btn">
-                        <label for=""> Começe agora </label>
-                    </button>
-                </a>
-            </div>
-            <div class="col-md-5">
-                <img class="img-fluid h-100" src="imagens\alunos.jpg" alt="OLA">
-            </div>
-        </div>
-    </div>
-    
+    <p> Este é o atividades.html </p>
+
+    <tr th:each="tema: ${temas}" class="nome-tema">
+        <ul>
+            <button> <td class="botao-tema" th:text = "${tema.nome}"> </td> </button>
+        </ul>
+    </tr>
 </body>
 
 </html>

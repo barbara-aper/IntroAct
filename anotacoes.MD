@@ -13,3 +13,14 @@ Classes:
 - Comparator (compara a resposta enviada com a resposta correta)
 - Classe do get e do post
 - Classes do thymeleaf e outros
+
+# to do
+-- 01/08 às 
+1. Brb: footer + terminar index
+2. Ray: estilizar botoes do json + descricao
+3. Ammm: descobrir como fazer os exercicio
+
+- tela de exercicio parametrizada
+- tela de contatos
+- testes
+
