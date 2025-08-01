@@ -26,10 +26,27 @@
     <div th:replace="fragments/navbar :: navbar"> </div>
 
     <div class="botoes-atividades">
-        <button th:each="tema: ${temas}" class="animated-button">
+        <!-- <button th:each="tema: ${temas}" class="animated-button" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
             <span th:text="${tema.nome}"></span> <span></span>
         </button>
-    </div>  
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum accumsan nunc, et viverra velit blandit quis. Phasellus at venenatis nibh. Phasellus consequat est quis lacus fermentum iaculis. Donec pellentesque est viverra sollicitudin pellentesque. Maecenas id enim ac augue tempor iaculis id vitae nisi. Aenean nec quam sed turpis vestibulum pulvinar. Morbi tempus pulvinar diam a mollis. Quisque non ligula rhoncus, euismod lorem sed, interdum felis. Mauris cursus a tortor at vulputate. 
+            </div>
+          </div> -->
+        
+    </div>
+
+    <p class="d-inline-flex gap-1">
+        <a class="botoes-atividades" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link with href
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum accumsan nunc, et viverra velit blandit quis. Phasellus at venenatis nibh. Phasellus consequat est quis lacus fermentum iaculis. Donec pellentesque est viverra sollicitudin pellentesque. Maecenas id enim ac augue tempor iaculis id vitae nisi. Aenean nec quam sed turpis vestibulum pulvinar. Morbi tempus pulvinar diam a mollis. Quisque non ligula rhoncus, euismod lorem sed, interdum felis. Mauris cursus a tortor at vulputate. 
+        </div>
+      </div>
 
 </body>
 </html>
