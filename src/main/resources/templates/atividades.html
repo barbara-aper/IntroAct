@@ -12,6 +12,8 @@
 
     <!--  referencia do css pessoal -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="navbar.css">
 
     <!--  referencia do js do bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -21,15 +23,15 @@
 
 <body>
     <!-- nav bar -->
-    <div th:replace="fragments/navbar :: navbar"></div>
+    <div th:replace="fragments/navbar :: navbar"> </div>
 
     <p> Este é o atividades.html </p>
 
-    <tr th:each="tema: ${temas}" class="nome-tema">
-        <ul>
-            <button> <td class="botao-tema" th:text = "${tema.nome}"> </td> </button>
-        </ul>
-    </tr>
-</body>
+    <div class="botoes-atividades">
+        <button th:each="tema: ${temas}" class="animated-button">
+            <span th:text="${tema.nome}"></span> <span></span>
+        </button>
+    </div>
 
+</body>
 </html>

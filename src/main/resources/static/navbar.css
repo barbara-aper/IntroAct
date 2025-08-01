@@ -1,0 +1,32 @@
+/* background da navbar */
+.navbar {
+    background-color : var(--dark-blue) !important;
+}
+
+/* bloco com tds os txt da navbar */
+.navbar-nav {
+    margin: auto;
+    width: 50%
+}
+/* introact */
+.navbar-brand {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* palavras da navbar */
+.nav-link {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: normal;
+    color: var(--white) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--orange) !important;
+}
+
+.nav-link:active {
+    color: var(--orange) !important;
+}
