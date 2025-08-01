@@ -25,13 +25,11 @@
     <!-- nav bar -->
     <div th:replace="fragments/navbar :: navbar"> </div>
 
-    <p> Este é o atividades.html </p>
-
     <div class="botoes-atividades">
         <button th:each="tema: ${temas}" class="animated-button">
             <span th:text="${tema.nome}"></span> <span></span>
         </button>
-    </div>
+    </div>  
 
 </body>
 </html>
