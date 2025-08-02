@@ -40,6 +40,25 @@
     margin-right: auto;
 }
 
+.wrapper {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+.wrapper li {
+  background-color: var(--blue);
+  padding: 12px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.tooltip {
+    color: white;
+    font-size: 1.2em;
+}
+
 /* From Uiverse.io by gharsh11032000 */ 
 /** botao em si */
 .animated-button {

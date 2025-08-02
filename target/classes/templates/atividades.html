@@ -37,7 +37,14 @@
             <div class="card card-body mt-2 area-collapse-custom" >
                 Conteúdo para o tema: <strong th:text="${tema.nome}"></strong>.
                 <br>
-                <span th:text="${tema.descricao}">
+                <span th:text="${tema.descricao}"> </span>
+
+                <ul class="wrapper">
+                    <li th:each="atividade, iterStat : ${tema.atividades}" class="wrapper-li">
+                        <a th:text="${iterStat.index+1}"> </a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>
