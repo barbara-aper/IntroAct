@@ -25,7 +25,18 @@
     <!-- nav bar -->
     <div th:replace="fragments/navbar :: navbar"></div>
 
-    <p> Oi, deu erro! </p>
+    <div style="margin: 10%;">
+        <p class="text-center" 
+            style="font-size: 100px; 
+                color: var(--orange);"> 
+                <strong> ERRO :(</strong> 
+        </p>
+        <p class="text-center"> 
+            Desculpe, parece que algo inesperado aconteceu! 
+            <br>
+            Tente novamente mais tarde, se o problema persiste, entre em contato conosco <a th:href="@{/contatos}"> clicando aqui </a>.
+        </p>
+    <div>
 
 </body>
 
