@@ -18,7 +18,7 @@ Classes:
 # to do
 -- 01/08 às 
 1. Brb: footer + terminar index
-2. Ray: estilizar botoes do json + descricao
+2. Ray: contatos
 3. Ammm: descobrir como fazer os exercicio
 
 - tela de exercicio parametrizada

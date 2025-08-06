@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="buttons.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -41,7 +42,9 @@
 
                 <ul class="wrapper">
                     <li th:each="atividade, iterStat : ${tema.atividades}" class="wrapper-li">
-                        <a th:text="${iterStat.index+1}"> </a>
+                        <button class="smaller-btn"
+                                th:text="${iterStat.index+1}">
+                        </button>
                     </li>
                 </ul>
 
@@ -49,6 +52,10 @@
         </div>
     </div>
     </div>
+
+    <footer>
+        <div th:replace="fragments/footer :: footer"> </div>
+    </footer>
 
 </body>
 </html>

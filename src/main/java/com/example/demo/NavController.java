@@ -14,25 +14,30 @@ public class NavController {
         this.themeService = themeService;
     }
 
-    @GetMapping("/index")   
+    @GetMapping("/index")
     public String index() {
-        return "index"; // carrega templates/index.html
+        return "index";
     }
 
     @GetMapping("/atividades")
     public String atividades(Model model) {
         List<Tema> temas = (List<Tema>) this.themeService.obtemTemas();
         model.addAttribute("temas", temas);
-        return "atividades"; // carrega templates/atividades.html
+        return "atividades";
     }
 
-    @GetMapping("/contatos")
-    public String contatos() {
-        return "contatos"; // carrega templates/contatos.html
+    @GetMapping("/contato")
+    public String contato() {
+        return "contato";
     }
 
     @GetMapping("/error")
     public String error() {
-        return "error";  // carrega templates/error.html
+        return "error";
+    }
+
+    @GetMapping("/faq")
+    public String faq() {
+        return "faq";
     }
 }

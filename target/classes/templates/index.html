@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="buttons.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
 
     <!--  referencia do js do bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -43,6 +44,9 @@
         </div>
     </div>
 
-</body>
+    <footer>
+        <div th:replace="fragments/footer :: footer"> </div>
+    </footer>
 
+</body>
 </html>

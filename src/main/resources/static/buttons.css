@@ -1,5 +1,20 @@
 
 /** Botao do index.html */
+.smaller-btn{
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 100px;
+    background-color: var(--blue);
+    color: var(--white);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.smaller-btn:hover {
+    padding: 3px 8px;
+    background-color: var(--dark-orange);
+}
+
 .small-btn{
     padding: 12.5px 30px;
     border: 0;

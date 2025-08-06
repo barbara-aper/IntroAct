@@ -14,6 +14,19 @@
                 }
             ],
             "tema" : "Lógica Boleana"
+        },
+        {
+            "exercicios" : [
+                {
+                    "idExercicio" : 4,
+                    "enunciado" : "Lógica Boleanaaaaaaaaaaa",
+                    "dificuldade" : 0,
+                    "tipo" : 0,
+                    "alternativas" : [],
+                    "gabarito" : []
+                }
+            ],
+            "tema" : "Lógica Boleana"
         }
     ]
 }

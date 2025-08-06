@@ -20,6 +20,11 @@
     --white: #F8F9FA;
 }
 
+html {
+    position: relative; /* Contexto de posicionamento */
+    height: 100%;
+}
+
 /* From Uiverse.io by adamgiebl */ 
 body {
     width: 100%;
