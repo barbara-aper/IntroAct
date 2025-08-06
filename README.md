@@ -61,7 +61,7 @@ mvn javadoc:javadoc
 ```
 Depois, para visualizar a documentação, abra o arquivo index.html
 ```
-demoIntroAct/target/site/apidocs/index.html
+target/site/apidocs/index.html
 ```
 
 ## Links úteis
