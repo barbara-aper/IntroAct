@@ -25,7 +25,7 @@ public class Tema {
      * @return o id do objeto
      */
     public Long getId() {
-        return id;
+        return this.id;
     }
     
     /**
@@ -33,7 +33,7 @@ public class Tema {
      * @return nome do tema
      */
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     /**
@@ -41,7 +41,7 @@ public class Tema {
      * @return descrição do tema
      */
     public String getDescricao() {
-        return descricao;
+        return this.descricao;
     }
 
     /**
@@ -49,6 +49,6 @@ public class Tema {
      * @return lista de atividades do tema
      */
     public List<Atividade> getAtividades() {
-        return atividades;
+        return this.atividades;
     }
 }

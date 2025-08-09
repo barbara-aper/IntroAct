@@ -20,31 +20,34 @@
 </head>
 
 <body>
+
     <div th:replace="fragments/navbar :: navbar"> </div>
 
     <div class="botoes-atividades">
-    <div th:each="tema, iterStat : ${temas}" class="text-center mb-3">
+    <div th:each="tema, idxTema : ${temas}" class="text-center mb-3">
         <button class="animated-button"
                 data-bs-toggle="collapse"
-                th:data-bs-target="'#collapse' + ${iterStat.index}"
+                th:data-bs-target="'#collapse' + ${idxTema.index}"
                 role="button"
                 aria-expanded="false"
-                th:aria-controls="'#collapse' + ${iterStat.index}">
-            <span th:text="${tema.nome}"></span>
-            <span></span>
+                th:aria-controls="'#collapse' + ${idxTema.index}">
+            <span th:text="${tema.nome}"> </span>
+            <span> </span>
         </button>
 
-        <div class="collapse" th:id="'collapse' + ${iterStat.index}">
+        <div class="collapse" th:id="'collapse' + ${idxTema.index}">
             <div class="card card-body mt-2 area-collapse-custom" >
-                Conteúdo para o tema: <strong th:text="${tema.nome}"></strong>.
+                Conteúdo para o tema: <strong th:text="${tema.nome}"> </strong>.
                 <br>
                 <span th:text="${tema.descricao}"> </span>
 
                 <ul class="wrapper">
-                    <li th:each="atividade, iterStat : ${tema.atividades}" class="wrapper-li">
-                        <button class="smaller-btn"
-                                th:text="${iterStat.index+1}">
-                        </button>
+                    <li th:each="atividade, idxAtividade : ${tema.atividades}" class="wrapper-li">
+                        <a th:href="@{'/exercicio/' + ${idxTema.index} + '/' + ${idxAtividade.index}}">
+                            <button class="smaller-btn"
+                                    th:text="${idxAtividade.index+1}">
+                            </button>
+                        </a>
                     </li>
                 </ul>
 

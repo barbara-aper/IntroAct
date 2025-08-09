@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class NavController {
@@ -24,6 +25,15 @@ public class NavController {
         List<Tema> temas = (List<Tema>) this.themeService.obtemTemas();
         model.addAttribute("temas", temas);
         return "atividades";
+    }
+
+    @GetMapping("/exercicio/{idTema}/{idAtividade}")
+    public String exercicio(Model model, @PathVariable int idTema, @PathVariable int idAtividade) {
+        List<Tema> temas = (List<Tema>) this.themeService.obtemTemas();
+        Tema tema = temas.get(idTema);
+        Atividade atv = tema.getAtividades().get(idAtividade);
+        model.addAttribute("atividade", atv);
+        return "exercicio";
     }
 
     @GetMapping("/contato")
