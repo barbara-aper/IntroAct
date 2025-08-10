@@ -24,7 +24,7 @@
     <div style="margin: 1%;">
         <a th:href="@{/atividades}">
             <button class="small-btn">
-                    <label class="text-white"> ↩ </label>
+                    <label class="text-white" style="font-family: 'Roboto', sans-serif;"> ↩ </label>
             </button>
         </a>
         <h1 class="text-center" style="color: var(--white)" th:text="${atividade.tema}"></h1>
@@ -44,11 +44,7 @@
                 </li>
             </ul>
         </div>
-
-        <!--<div th:each="exercicio : ${atividade.exercicios}">
-            <p th:text="${exercicio.enunciado}"> </p>
-        </div> -->
-        <p class="text-white" id="meuTitulo"> </p>
+        <p class="text-white" id="enunciadoExercicio"> </p>
     </div>
 
     <div style="margin: 1%;">
@@ -62,23 +58,28 @@
 <script type="text/javascript" th:inline="javascript">
     const jsonExercicios = '[[${atividade.exercicios}]]';
     const listaExercicios = JSON.parse(jsonExercicios);
-    console.log(listaExercicios);
-    
+
+    var qtdExercicios = listaExercicios.length;
     var idEx = 0;
-    //var enunciado = listaExercicios[idEx].enunciado;
-    //listaExercicios[idEx].enunciado.style.backgroundColor = "light-orange";
+
+    var ulExercicios = document.getElementById("numeros-exercicios-btn");
+    const botoesExercicios = ulExercicios.querySelectorAll('.smaller-btn');
 
     var enunciado = listaExercicios[idEx].enunciado;
-    var titulo = document.getElementById("meuTitulo");
+    var titulo = document.getElementById("enunciadoExercicio");
     titulo.textContent = enunciado;
 
-    /*document.getElementById('next-exercise-btn').addEventListener('click', function() {
-        //add correção da questão
-        listaExercicios[idEx].enunciado.style.backgroundColor = "dark-orange";
-        idEx++;
-        enunciado = listaExercicios[idEx].enunciado;
-        listaExercicios[idEx].enunciado.style.backgroundColor = "light-orange";
-    });*/
+    botoesExercicios[idEx].style.backgroundColor = '#f4c708';
+
+    document.getElementById('next-exercise-btn').addEventListener('click', function() {
+        //add correção da questão e mudança de cor condicional
+        botoesExercicios[idEx].style.backgroundColor = '#f07e24';
+        if(idEx+1 != qtdExercicios){
+            idEx++;
+            enunciado = listaExercicios[idEx].enunciado;
+            botoesExercicios[idEx].style.backgroundColor = '#f4c708';
+        }
+    });
 </script>
 
 </html>

@@ -24,4 +24,7 @@ Classes:
 - tela de exercicio parametrizada
 - tela de contatos
 - testes
-
+- json
+- redes sociais no footer
+- faq
+- botao fica branco com mouse em cima
