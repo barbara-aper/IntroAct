@@ -21,21 +21,64 @@
 </head>
 
 <body>
-    <a th:href="@{/atividades}">
-        <button class="small-btn">
-                <label class="text-white"> ↩ </label>
+    <div style="margin: 1%;">
+        <a th:href="@{/atividades}">
+            <button class="small-btn">
+                    <label class="text-white"> ↩ </label>
+            </button>
+        </a>
+        <h1 class="text-center" style="color: var(--white)" th:text="${atividade.tema}"></h1>
+    </div>
+
+    <ul id="all-exercises">
+        <li th:each="exercicio, idxExercicio : ${atividade.exercicios}"></li>
+    </ul>
+
+    <div class="text-center" style="margin: 1%;">    
+        <div>
+            <ul class="wrapper" id="numeros-exercicios-btn">
+                <li th:each="exercicio, idxExercicio : ${atividade.exercicios}" class="wrapper-li">
+                    <button class="smaller-btn"
+                        th:text="${idxExercicio.index+1}">
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!--<div th:each="exercicio : ${atividade.exercicios}">
+            <p th:text="${exercicio.enunciado}"> </p>
+        </div> -->
+        <p class="text-white" id="meuTitulo"> </p>
+    </div>
+
+    <div style="margin: 1%;">
+        <button class="small-btn" id="next-exercise-btn">
+            <label class="text-white"> Próximo exercício </label>
         </button>
-    </a>
-
-    <div style="margin: 10%;">
-        <p class="text-center"> oi dever aqui blz </p>
     </div>
-
-    <div th:each="exercicio : ${atividade.exercicios}">
-        <p th:text="${exercicio.enunciado}"> </p>
-    </div>
-    
 
 </body>
+
+<script type="text/javascript" th:inline="javascript">
+    const jsonExercicios = '[[${atividade.exercicios}]]';
+    const listaExercicios = JSON.parse(jsonExercicios);
+    console.log(listaExercicios);
+    
+    var idEx = 0;
+    //var enunciado = listaExercicios[idEx].enunciado;
+    //listaExercicios[idEx].enunciado.style.backgroundColor = "light-orange";
+
+    var enunciado = listaExercicios[idEx].enunciado;
+    var titulo = document.getElementById("meuTitulo");
+    titulo.textContent = enunciado;
+
+    /*document.getElementById('next-exercise-btn').addEventListener('click', function() {
+        //add correção da questão
+        listaExercicios[idEx].enunciado.style.backgroundColor = "dark-orange";
+        idEx++;
+        enunciado = listaExercicios[idEx].enunciado;
+        listaExercicios[idEx].enunciado.style.backgroundColor = "light-orange";
+    });*/
+</script>
 
 </html>
