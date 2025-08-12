@@ -1,0 +1,212 @@
+[
+    {
+        "nome": "Programação em blocos",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Programação em blocos I",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["um", "dois", "tres"],
+                        "gabarito": ["um", "dois", "tres"]
+                    }
+                ],
+                "tema": "Programação em blocos"
+            },
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Programação em blocos II",
+                        "dificuldade": 0,
+                        "tipo": 1,
+                        "alternativas": ["um", "dois", "tres"],
+                        "gabarito": ["um", "dois", "tres"]
+                    }
+                ],
+                "tema": "Programação em blocos"
+            },
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Programação em blocos III" ,
+                        "dificuldade": 0,
+                        "tipo": 2,
+                        "alternativas": ["um", "dois", "tres"],
+                        "gabarito": ["um", "dois", "tres"]
+                    }
+                ],
+                "tema": "Programação em blocos"
+            },
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Programação em blocos IV" ,
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["um", "dois", "tres"],
+                        "gabarito": ["um", "dois", "tres"]
+                    }
+                ],
+                "tema": "Programação em blocos"
+            }
+        ]
+    },
+    {
+        "nome": "Aritmética e Tipos de Dados",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    },
+    {
+        "nome": "Lógica I",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    },
+    {
+        "nome": "Lógica II & Condicionais I",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    },
+    {
+        "nome": "Revisão I",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    },
+    {
+        "nome": "Loops I",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    },
+    {
+        "nome": "Loops II & Lista I",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    },
+    {
+        "nome": "Lista II",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    },
+    {
+        "nome": "Revisão II",
+        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "atividades": [
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": 4,
+                        "enunciado": "Lógica Boleana",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": [],
+                        "gabarito": []
+                    }
+                ],
+                "tema": "Lógica Boleana"
+            }
+        ]
+    }
+]
