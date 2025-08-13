@@ -16,15 +16,14 @@ Classes:
 - Classes do thymeleaf e outros
 
 # to do
--- 01/08 às 
-1. Brb: footer + terminar index
-2. Ray: contatos
-3. Ammm: descobrir como fazer os exercicio
+-- geral: tela do exercicio
+1. Brb: footer(redes sociais) + terminar index
+2. Ray: contatos + faq + testes
+3. Ammm: descobrir como fazer os exercicio + json
 
-- tela de exercicio parametrizada
-- tela de contatos
-- testes
-- json
-- redes sociais no footer
-- faq
-- botao fica branco com mouse em cima
+-- criar exercicios
+-- pensar em perguntas frequentes (faq)
+-- substituir os txt lorem ipsum com algo real (contato, index)
+-- fotos de vdd
+-- botao da pagina ficar colorido qnd na pagina
+

@@ -17,42 +17,70 @@
     background-color: var(--dark-orange);
 }
 
+
 .small-btn{
-    padding: 12.5px 30px;
-    border: 0;
-    border-radius: 100px;
-    background-color: var(--blue);
     color: var(--white);
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 17px;
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: var(--blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px var(--dark-blue);
+    transition: all 0.1s;
+    overflow: hidden;
 }
 
 .small-btn:hover {
-  background-color: var(--white);
-  transform: scale(1.1);
+  box-shadow: 0px 2px 0px var(--dark-blue);
+  position: relative;
+  top: 2px;
 }
+
 
 /** area do botao das atividades */
 .botoes-atividades {
     display: flex;
-    flex-direction: column; /* Empilha os botões um em cima do outro */
-    align-items: center;     /* Centraliza eles horizontalmente */
-    justify-content: center; /* Centraliza o bloco de botões verticalmente no espaço disponível */
-    padding: 30px 0;         /* Adiciona um espaçamento para não colar no topo/rodapé */
-    gap: 10px;               /* Adiciona um espaço entre cada botão */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    gap: 10px;
 }
+
+.animated-button {
+    color: var(--white);
+    position: relative;
+    display: inline-block;
+    padding: 12px 250px;
+    font-size: 17px;
+    background-color: var(--dark-orange);
+    border: 1px solid var(--light-orange);
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px var(--super-dark-orange);
+    transition: all 0.1s;
+    overflow: hidden;
+}
+
+
+/** animacao de quando passa o mouse em cima */
+.animated-button:hover {
+    box-shadow: 0px 2px 0px var(--dark-orange);
+    position: relative;
+    top: 2px;
+}
+
 
 /** area q abre qnd clica no botao */   
 .area-collapse-custom {
     width: 85%;
     max-width: 700px;
-    
     height: 200px;
-
-    /* IMPORTANTE: Adiciona uma barra de rolagem vertical APENAS se o conteúdo for maior que a altura definida */
     overflow-y: auto;
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -68,48 +96,3 @@
     color: white;
     font-size: 1.2em;
 }
-
-/* From Uiverse.io by gharsh11032000 */ 
-/** botao em si */
-.animated-button {
-    position: relative;
-    display: inline-block;
-    padding: 12px 250px;
-    border: none;
-    font-size: 16px;
-    background-color: inherit;
-    border-radius: 100px;
-    font-weight: 600;
-    color: #ffffff;
-    box-shadow: 0 0 0 2px #ffffff20;
-    cursor: pointer;
-    overflow: hidden;
-    background-color: var(--dark-orange);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-/** comentado pq n sei p q serve, foi do codigo pronto */
-/* .animated-button span:last-child {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.animated-button span:first-child {
-    position: relative;
-    z-index: 1;
-} */
-
-/** animacao de quando passa o mouse em cima */
-.animated-button:hover {
-    box-shadow: 0 0 0 5px var(--white);
-    /* color: #ffffff; */
-}
-
-

@@ -30,9 +30,9 @@
         <h1 class="text-center" style="color: var(--white)" th:text="${atividade.tema}"></h1>
     </div>
 
-    <ul id="all-exercises">
+    <!-- <ul id="all-exercises">
         <li th:each="exercicio, idxExercicio : ${atividade.exercicios}"></li>
-    </ul>
+    </ul> -->
 
     <div class="text-center" style="margin: 1%;">    
         <div>
@@ -76,7 +76,7 @@
         botoesExercicios[idEx].style.backgroundColor = '#f07e24';
         if(idEx+1 != qtdExercicios){
             idEx++;
-            enunciado = listaExercicios[idEx].enunciado;
+            titulo.textContent = listaExercicios[idEx].enunciado;
             botoesExercicios[idEx].style.backgroundColor = '#f4c708';
         }
     });

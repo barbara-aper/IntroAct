@@ -44,6 +44,7 @@ h1 {
 
 p {
     color: var(--white);
+    text-align: justify;
 }
 
 .flex-wrapper {
