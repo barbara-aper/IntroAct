@@ -22,6 +22,5 @@ Classes:
 3. Ammm: descobrir como fazer os exercicio + json
 
 -- criar exercicios
--- pensar em perguntas frequentes (faq)
 -- substituir os txt lorem ipsum com algo real (contato, index)
 -- fotos de vdd
