@@ -72,8 +72,10 @@
     color: var(--white);
     position: relative;
     display: inline-block;
-    padding: 12px 250px;
-    font-size: 17px;
+    /* padding: 12px 250px; */
+    width: 70vh;
+    height: 7vh;
+    font-size: 20px;
     background-color: var(--dark-orange);
     border: 1px solid var(--light-orange);
     border-radius: 100px;
