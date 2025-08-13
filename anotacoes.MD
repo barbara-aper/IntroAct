@@ -25,5 +25,3 @@ Classes:
 -- pensar em perguntas frequentes (faq)
 -- substituir os txt lorem ipsum com algo real (contato, index)
 -- fotos de vdd
--- botao da pagina ficar colorido qnd na pagina
-

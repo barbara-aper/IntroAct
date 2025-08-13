@@ -14,7 +14,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav justify-content-evenly">
+                    <ul class="navbar-nav justify-content-evenly" id="navbar-buttons">
                         <li class="nav-item">
                             <a class="nav-link active" 
                                th:href="@{/index}"
@@ -55,11 +55,16 @@
                 </div>
             </div>
         </nav>
+        <script>
+            const navBarBtn = document.querySelectorAll('ul#navbar-buttons a');
+            const pathname = window.location.pathname;
+
+            if(pathname == '/index') navBarBtn[0].style.setProperty('color', '#f07e24', 'important');
+            if(pathname == '/atividades') navBarBtn[1].style.setProperty('color', '#f07e24', 'important');
+            if(pathname == '/faq') navBarBtn[2].style.setProperty('color', '#f07e24', 'important');
+            if(pathname == '/contato') navBarBtn[3].style.setProperty('color', '#f07e24', 'important');
+        </script>
     </div>
 </body>
-
-<scrip>
-
-</script>
 
 </html>
