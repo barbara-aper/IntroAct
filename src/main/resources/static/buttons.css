@@ -3,7 +3,9 @@
 .smaller-btn{
     padding: 5px 10px;
     border: 0;
-    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     background-color: var(--blue);
     color: var(--white);
     transition: all 0.5s;
@@ -60,13 +62,6 @@
   display: flex;
   gap: 10px;
   padding: 0;
-}
-
-.wrapper li {
-  background-color: var(--blue);
-  padding: 12px;
-  border-radius: 50%;
-  font-weight: bold;
 }
 
 .tooltip {
