@@ -40,6 +40,23 @@
   top: 2px;
 }
 
+.big-btn{
+    color: var(--white);
+    width: 70vh;
+    height: 8vh;
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 17px;
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: var(--blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 100px;
+    box-shadow: 0px 6px 0px var(--dark-blue);
+    transition: all 0.1s;
+    overflow: hidden;
+}
+
 
 /** area do botao das atividades */
 .botoes-atividades {
