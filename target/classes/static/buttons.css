@@ -1,5 +1,4 @@
-
-/** Botao do index.html */
+/** Round exercise button */
 .smaller-btn{
     padding: 5px 10px;
     border: 0;
@@ -11,13 +10,12 @@
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
-
 .smaller-btn:hover {
     padding: 3px 8px;
     background-color: var(--dark-orange);
 }
 
-
+/** Index button */
 .small-btn{
     color: var(--white);
     position: relative;
@@ -34,74 +32,75 @@
     overflow: hidden;
 }
 
+.act-container {
+    width: 70vh; /* Define a largura aqui */
+    margin: 0 auto;
+}
+
 .small-btn:hover {
   box-shadow: 0px 2px 0px var(--dark-blue);
   position: relative;
   top: 2px;
 }
 
-.big-btn{
-    color: var(--white);
-    width: 70vh;
-    height: 8vh;
-    position: relative;
-    display: inline-block;
-    padding: 10px 25px;
-    font-size: 17px;
-    font-family: "Roboto Condensed", sans-serif;
-    background-color: var(--blue);
-    border: 1px solid var(--light-blue);
-    border-radius: 100px;
-    box-shadow: 0px 6px 0px var(--dark-blue);
-    transition: all 0.1s;
-    overflow: hidden;
-}
-
-
-/** area do botao das atividades */
-.botoes-atividades {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
-    gap: 10px;
-}
-
-.animated-button {
+/* Estilo do botão */
+.act-btn {
     color: var(--white);
     position: relative;
-    display: inline-block;
-    /* padding: 12px 250px; */
-    width: 70vh;
+    display: block; /* Faz o botão ocupar a largura total do container */
+    width: 100%;    /* Garante que ele ocupe 100% do .activity-container */
     height: 7vh;
     font-size: 20px;
     background-color: var(--dark-orange);
     border: 1px solid var(--light-orange);
-    border-radius: 100px;
+    border-radius: 100px; /* Cantos totalmente arredondados por padrão */
     cursor: pointer;
     box-shadow: 0px 6px 0px var(--super-dark-orange);
-    transition: all 0.1s;
+    transition: all 0.1s ease-in-out;
     overflow: hidden;
 }
 
+.act-btn[aria-expanded="true"] {
+    /* Remove o arredondamento dos cantos inferiores para conectar com a div */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* Remove a sombra para um visual mais limpo quando expandido */
+    box-shadow: none; 
+    top: 0;
+    border-bottom-color: transparent;
+}
 
-/** animacao de quando passa o mouse em cima */
-.animated-button:hover {
-    box-shadow: 0px 2px 0px var(--dark-orange);
-    position: relative;
+/* Efeito de "pressionar" no hover SOMENTE quando o botão está fechado */
+.act-btn[aria-expanded="false"]:hover {
+    box-shadow: 0px 4px 0px var(--super-dark-orange);
     top: 2px;
 }
 
+/* Quando o botão estiver expandido, o hover tem um efeito diferente */
+.act-btn[aria-expanded="true"]:hover {
+    box-shadow: 0px 1px 0px var(--super-dark-orange);
+    top: 0;
+}
 
-/** area q abre qnd clica no botao */   
+/* Área de colapso */
 .area-collapse-custom {
-    width: 85%;
-    max-width: 700px;
-    height: 200px;
-    overflow-y: auto;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: var(--white);
+    /* Remove o arredondamento dos cantos superiores para conectar com o botão */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    /* Adiciona arredondamento inferior e bordas para completar o visual */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid var(--light-orange);
+    border-top: none; /* Remove a borda superior para uma fusão perfeita */
+    
+    /* CORREÇÃO FINAL: Usa uma margem negativa para puxar a área para cima e fechar o espaço */
+    margin-top: -1px; 
+    
+    padding: 1.5rem;
+    position: relative; /* Adicionado para garantir o empilhamento correto */
 }
 
 .wrapper {

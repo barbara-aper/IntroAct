@@ -27,9 +27,9 @@
             ORIUEYHIRJIAKOLPÇ
     </h1>
 
-    <div class="botoes-atividades">
+    <div class="act-container">
     <div th:each="tema, idxTema : ${temas}" class="text-center mb-3">
-        <button class="animated-button"
+        <button class="act-btn"
                 data-bs-toggle="collapse"
                 th:data-bs-target="'#collapse' + ${idxTema.index}"
                 role="button"
@@ -40,7 +40,7 @@
         </button>
 
         <div class="collapse" th:id="'collapse' + ${idxTema.index}">
-            <div class="card card-body mt-2 area-collapse-custom" >
+            <div class="card card-body area-collapse-custom" >
                 Conteúdo para o tema: <strong th:text="${tema.nome}"> </strong>.
                 <br>
                 <span th:text="${tema.descricao}"> </span>
