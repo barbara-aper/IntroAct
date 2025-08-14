@@ -6,12 +6,28 @@
             {
                 "exercicios": [
                     {
-                        "idExercicio": 4,
-                        "enunciado": "Lógica Boleana",
+                        "idExercicio": "T101",
+                        "enunciado": "Qual função é utilizada para exibir algo na tela com Python?",
                         "dificuldade": 0,
                         "tipo": 0,
-                        "alternativas": [],
-                        "gabarito": []
+                        "alternativas": ["print()", "show()", "display()", "echo()"],
+                        "gabarito": ["print()"]
+                    },
+                    {
+                        "idExercicio": "T102",
+                        "enunciado": "Qual operador em Python retorna o resto da divisão entre dois números?",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["//", "%", "/", "**"],
+                        "gabarito": ["%"]
+                    },
+                    {
+                        "idExercicio": "T103",
+                        "enunciado": "Qual função é utilizada para exibir algo na tela com Python?",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["print()", "show()", "display()", "echo()"],
+                        "gabarito": ["print()"]
                     }
                 ],
                 "tema": "Aritmética e Tipos de Dados"

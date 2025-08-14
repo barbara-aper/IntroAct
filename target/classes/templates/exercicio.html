@@ -30,10 +30,6 @@
         <h1 class="text-center" style="color: var(--white)" th:text="${atividade.tema}"></h1>
     </div>
 
-    <!-- <ul id="all-exercises">
-        <li th:each="exercicio, idxExercicio : ${atividade.exercicios}"></li>
-    </ul> -->
-
     <div class="text-center" style="margin: 1%;">    
         <div>
             <ul class="wrapper" id="numeros-exercicios-btn">
@@ -47,6 +43,10 @@
         <p class="text-white" id="enunciadoExercicio"> </p>
     </div>
 
+    <div class="text-center" style="margin: 1%;">    
+        <ul class="botoes-atividades" id="alternativas"></ul>
+    </div>
+
     <div style="margin: 1%;">
         <button class="small-btn" id="next-exercise-btn">
             <label class="text-white"> Próximo exercício </label>
@@ -56,8 +56,38 @@
 </body>
 
 <script type="text/javascript" th:inline="javascript">
+    function atualizaTelaExercicio(listaExercicios, idEx){    
+        const alternativasList = document.getElementById("alternativas");
+
+        if(listaExercicios[idEx].tipo == "MULTIPLA_ESCOLHA"){
+            const alternativasText = listaExercicios[idEx].alternativas;
+            alternativasText.forEach(alternativa => {
+                const itemAlternativa = document.createElement("li");
+                itemAlternativa.className += "animated-button";
+                itemAlternativa.textContent = alternativa;
+                alternativasList.appendChild(itemAlternativa);    
+            });
+        }
+    }
+
+    function limpaTelaExercicio(){
+        const alternativasList = document.getElementById("alternativas");
+        alternativasList.replaceChildren();
+    }
+
+    function confereResposta(respostaAluno, gabarito){
+        var respostaCorreta = true;
+        respostaAluno.forEach(resposta => {
+            if(gabarito.includes(resposta) == false){
+                respostaCorreta = false;
+            }
+        });
+        return respostaCorreta;
+    }
+
     const jsonExercicios = '[[${atividade.exercicios}]]';
     const listaExercicios = JSON.parse(jsonExercicios);
+    const respostaAluno = [];
 
     var qtdExercicios = listaExercicios.length;
     var idEx = 0;
@@ -71,13 +101,37 @@
 
     botoesExercicios[idEx].style.backgroundColor = '#f4c708';
 
+    atualizaTelaExercicio(listaExercicios, idEx);
+
+    document.getElementById('alternativas').addEventListener('click', function(event) {
+        if(listaExercicios[idEx].tipo == "MULTIPLA_ESCOLHA"){
+            respostaAluno.splice(0, respostaAluno.length);
+
+            const alternativasList = document.getElementById("alternativas");
+            const itensDaLista = alternativasList.querySelectorAll('ul > li');
+            
+            itensDaLista.forEach(button => {
+                button.style.backgroundColor = '#f07e24';
+            });
+        }
+
+        const alternativaClick = event.target;
+        alternativaClick.style.setProperty("background-color", '#c26018', "important");
+        respostaAluno.push(alternativaClick.textContent);
+    });
+
     document.getElementById('next-exercise-btn').addEventListener('click', function() {
-        //add correção da questão e mudança de cor condicional
-        botoesExercicios[idEx].style.backgroundColor = '#f07e24';
+        if(confereResposta(respostaAluno, listaExercicios[idEx].gabarito)){
+            botoesExercicios[idEx].style.backgroundColor = '#32a155';
+        }else{
+            botoesExercicios[idEx].style.backgroundColor = '#f2351f';
+        }
         if(idEx+1 != qtdExercicios){
             idEx++;
             titulo.textContent = listaExercicios[idEx].enunciado;
             botoesExercicios[idEx].style.backgroundColor = '#f4c708';
+            limpaTelaExercicio();
+            atualizaTelaExercicio(listaExercicios, idEx);
         }
     });
 </script>
