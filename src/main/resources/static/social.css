@@ -1,0 +1,65 @@
+/* From Uiverse.io by vinodjangid07 */ 
+.card {
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);  
+}
+
+/* for all social containers*/
+.socialContainer {
+    border: 1px solid var(--light-blue);
+    border-radius: 10px;
+
+    width: 220px;
+    height: 40px;
+    padding-left: 10px;
+
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.socialContainer:hover {
+    background-color: var(--orange);
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+    margin-right: 10px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
