@@ -25,3 +25,4 @@ Classes:
 -- substituir os txt lorem ipsum com algo real (contato, index)
 -- fotos de vdd
 -- fotos dos de vdd
+-- documentar classes/metodos

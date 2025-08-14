@@ -23,11 +23,11 @@
                     },
                     {
                         "idExercicio": "T103",
-                        "enunciado": "Qual função é utilizada para exibir algo na tela com Python?",
+                        "enunciado": "Correlacione os itens da coluna da esquerda com os itens da coluna da direita.",
                         "dificuldade": 0,
-                        "tipo": 0,
-                        "alternativas": ["print()", "show()", "display()", "echo()"],
-                        "gabarito": ["print()"]
+                        "tipo": 1,
+                        "alternativas": ["10", "True", "IntroAct", "9.1", "boolean", "int", "float", "string"],
+                        "gabarito": ["int", "boolean", "string", "float"]
                     }
                 ],
                 "tema": "Aritmética e Tipos de Dados"
