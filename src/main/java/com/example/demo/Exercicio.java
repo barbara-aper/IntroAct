@@ -8,6 +8,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/** 
+ * Exercício é uma entidade  com problema a ser resolvido pelo usuário. Ele é composto por um enunciado, 
+ * um conjunto de alternativas para resposta e modelado com dependencia do tipo do exercício.
+ */
 @Entity
 public class Exercicio {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)

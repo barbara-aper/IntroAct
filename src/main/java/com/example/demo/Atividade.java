@@ -9,6 +9,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
+/**
+ * Atividade é uma entidade que representa o conjunto de exercícios disponíveis em determinado Tema
+ */
 @Entity
 public class Atividade {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)

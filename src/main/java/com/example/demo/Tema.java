@@ -9,6 +9,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
+/**
+ * Entidade com o tema geral para um conjunto de atividades, com nome e uma 
+ */
 @Entity
 public class Tema {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
