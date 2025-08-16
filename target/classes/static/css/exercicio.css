@@ -1,0 +1,5 @@
+.container-alternativas {
+    display: flex;
+    justify-content: center; /* Centraliza as listas horizontalmente */
+    gap: 20px; /* Adiciona um espaço entre as listas */
+}

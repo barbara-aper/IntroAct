@@ -24,4 +24,3 @@ Classes:
 -- criar exercicios
 -- substituir os txt lorem ipsum com algo real (contato, index)
 -- fotos de vdd
--- documentar classes/metodos
