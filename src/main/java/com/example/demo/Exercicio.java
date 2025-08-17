@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.ElementCollection;
@@ -21,10 +22,32 @@ public class Exercicio {
     private String enunciado;
     private Dificuldade dificuldade;
     private Tipo tipo;
-    @ElementCollection
-    private List<String> alternativas;
-    @ElementCollection
-    private List<String> gabarito;
+    @ElementCollection private List<String> alternativas = new ArrayList<>();
+    @ElementCollection private List<String> gabarito = new ArrayList<>();
+
+    public void setIdExercicio(String idExercicio) {
+        this.idExercicio = idExercicio;
+    }
+
+    public void setEnunciado(String enunciado) {
+        this.enunciado = enunciado;
+    }
+
+    public void setDificuldade(Dificuldade dificuldade) {
+        this.dificuldade = dificuldade;
+    }
+
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setAlternativas(List<String> alternativas) {
+        this.alternativas = alternativas;
+    }
+
+    public void setGabarito(List<String> gabarito) {
+        this.gabarito = gabarito;
+    }
 
     /**
      * Obtem o id de um objeto especifico exercicio
