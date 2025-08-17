@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Service @RestController
 public class ThemeService {
-    @Autowired
-    private final ThemeRepository themeRepository;
+    @Autowired private final ThemeRepository themeRepository;
     
     /**
 	 * Contrutor dos servicos para comunicacao com o banco de dados

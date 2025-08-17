@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -14,14 +15,28 @@ import jakarta.persistence.OneToMany;
  */
 @Entity
 public class Tema {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @Id @GeneratedValue(strategy = GenerationType.AUTO) private Long id;
     
     private String nome;
     private String descricao;
-    
-    @OneToMany(cascade=CascadeType.PERSIST)
-    private List<Atividade> atividades;
+    @OneToMany(cascade=CascadeType.PERSIST) 
+    private List<Atividade> atividades = new ArrayList<>();
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setAtividades(List<Atividade> atividades) {
+        this.atividades = atividades;
+    }
+
+    public void addAtividade(Atividade atividade) {
+        this.atividades.add(atividade);
+    }
 
     /**
      * Obtem o id de um objeto especifico tema
