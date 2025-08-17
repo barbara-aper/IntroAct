@@ -22,18 +22,34 @@ public class Tema {
     @OneToMany(cascade=CascadeType.PERSIST) 
     private List<Atividade> atividades = new ArrayList<>();
 
+    /**
+     * Define nome para o tema.
+     * @param nome nome do tema.
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     * Define descricao para o tema.
+     * @param descricao descricao do tema.
+     */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
+    /**
+     * Define as atividades de um tema.
+     * @param atividades lista de atividades.
+     */
     public void setAtividades(List<Atividade> atividades) {
         this.atividades = atividades;
     }
 
+    /**
+     * Adiciona uma atividade ao tema.
+     * @param atividade atividade a ser adicionada a lista de atividades do tema.
+     */
     public void addAtividade(Atividade atividade) {
         this.atividades.add(atividade);
     }
