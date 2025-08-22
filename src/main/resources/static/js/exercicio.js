@@ -36,6 +36,10 @@ function atualizaTelaExercicio(listaExercicios, idEx) {
             respostasList.appendChild(itemAlternativa);
         }
     }
+
+    if (listaExercicios[idEx].tipo == "ESCRITA"){
+
+    }
 }
 
 function limpaTelaExercicio() {
@@ -44,7 +48,7 @@ function limpaTelaExercicio() {
 
     const respostasList = document.getElementById("alternativas2");
     respostasList.replaceChildren();
-
+    
     respostaAluno.splice(0, respostaAluno.length);
 }
 
@@ -58,12 +62,18 @@ function confereResposta(respostaAluno, gabarito, tipo) {
             }
         });
         return respostaCorreta;
-    } else { // CORRELACAO
+    } else { // CORRELACAO E ESCRITA
+        if(tipo == 'ESCRITA'){
+            escritaInput = document.getElementsByClassName("input-resposta");
+            console.log(escritaInput);
+            for (let input of escritaInput){
+                respostaAluno.push(input.value);
+            }
+        }
         let respostaCorreta = true;
         if (respostaAluno.length != gabarito.length) {
             respostaCorreta = false;
         } else {
-            // CORREÇÃO AQUI
             for (let i = 0; i < respostaAluno.length; i++) {
                 if (respostaAluno[i] != gabarito[i]) {
                     respostaCorreta = false;
@@ -71,6 +81,16 @@ function confereResposta(respostaAluno, gabarito, tipo) {
             }
         }
         return respostaCorreta;
+    }
+}
+
+function insereEnunciado(){
+    if(listaExercicios[idEx].tipo == 'ESCRITA'){
+        enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<input type="text" class="input-resposta">`); //3 underscore como input texto
+        titulo.innerHTML = enunciado;
+    }
+    else{
+        titulo.textContent = listaExercicios[idEx].enunciado;
     }
 }
 
@@ -83,9 +103,10 @@ let idAlternativa = 0;
 
 let ulExercicios = document.getElementById("numeros-exercicios-btn");
 const botoesExercicios = ulExercicios.querySelectorAll('.smaller-btn');
-let enunciado = listaExercicios[idEx].enunciado;
+let enunciado;
 let titulo = document.getElementById("enunciadoExercicio");
-titulo.textContent = enunciado;
+
+insereEnunciado();
 
 botoesExercicios[idEx].style.backgroundColor = '#f4c708';
 
@@ -142,11 +163,12 @@ document.getElementById('next-exercise-btn').addEventListener('click', function 
         botoesExercicios[idEx].style.backgroundColor = '#f2351f';
     }
     if (idEx + 1 != qtdExercicios) {
+        limpaTelaExercicio();
         idEx++;
         idAlternativa = 0;
-        titulo.textContent = listaExercicios[idEx].enunciado;
+        //enunciado
+        insereEnunciado();
         botoesExercicios[idEx].style.backgroundColor = '#f4c708';
-        limpaTelaExercicio();
         atualizaTelaExercicio(listaExercicios, idEx);
     }
 });

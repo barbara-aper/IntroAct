@@ -14,6 +14,22 @@
                         "gabarito": ["print()"]
                     },
                     {
+                        "idExercicio": "T101",
+                        "enunciado": "Qual função é utilizada para exibir ___ algo na tela com Python?",
+                        "dificuldade": 0,
+                        "tipo": 2,
+                        "alternativas": ["print()", "show()", "display()", "echo()"],
+                        "gabarito": ["print()"]
+                    },
+                    {
+                        "idExercicio": "T101",
+                        "enunciado": "Qual função é utilizada ___ para exibir algo na tela com Python?",
+                        "dificuldade": 0,
+                        "tipo": 2,
+                        "alternativas": ["print()", "show()", "display()", "echo()"],
+                        "gabarito": ["print()"]
+                    },
+                    {
                         "idExercicio": "T102",
                         "enunciado": "Qual operador em Python retorna o resto da divisão entre dois números?",
                         "dificuldade": 0,
