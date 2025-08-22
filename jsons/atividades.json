@@ -15,11 +15,11 @@
                     },
                     {
                         "idExercicio": "T101",
-                        "enunciado": "Qual função é utilizada para exibir ___ algo na tela com Python?",
+                        "enunciado": "Qual função é utilizada para exibir ___ algo na tela com ___ Python?",
                         "dificuldade": 0,
-                        "tipo": 2,
+                        "tipo": 3,
                         "alternativas": ["print()", "show()", "display()", "echo()"],
-                        "gabarito": ["print()"]
+                        "gabarito": ["print()", "show()"]
                     },
                     {
                         "idExercicio": "T101",

@@ -93,6 +93,44 @@
     top: 2px;
 }
 
+.animated-button.used {
+    border: 1px solid var(--light-orange) !important; 
+    background-color: #c26018 !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.lacuna-button {
+    color: var(--white);
+    position: relative;
+    display: inline-block;
+    padding: 3px 6px;
+    width: auto;
+    height: 7vh;
+    font-size: 20px;
+    background-color: var(--dark-orange);
+    border: 1px solid var(--light-orange);
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px var(--super-dark-orange);
+    transition: all 0.1s;
+    overflow: hidden;
+}
+
+
+/** animacao de quando passa o mouse em cima */
+.lacuna-button:hover {
+    box-shadow: 0px 2px 0px var(--dark-orange);
+    position: relative;
+    top: 2px;
+}
+
+.lacuna-button.used {
+    border: 1px solid var(--light-orange) !important; 
+    background-color: #c26018 !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
 
 /** area q abre qnd clica no botao */   
 .area-collapse-custom {
