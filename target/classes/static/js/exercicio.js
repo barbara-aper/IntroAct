@@ -1,6 +1,7 @@
 // Funções e lógica do exercício
 function atualizaTelaExercicio(listaExercicios, idEx) {
     const alternativasList = document.getElementById("alternativas");
+    const alternativas2List = document.getElementById("alternativas2");
 
     if (listaExercicios[idEx].tipo == "MULTIPLA_ESCOLHA") {
         const alternativasText = listaExercicios[idEx].alternativas;
@@ -13,32 +14,46 @@ function atualizaTelaExercicio(listaExercicios, idEx) {
     }
 
     if (listaExercicios[idEx].tipo == "CORRELACAO") {
-        const respostasList = document.getElementById("alternativas2");
         const alternativasText = listaExercicios[idEx].alternativas;
         const tamanho = alternativasText.length;
-        // CORREÇÃO AQUI
+
         for (let i = 0; i < (tamanho / 2); i++) {
             const itemAlternativa = document.createElement("li");
             itemAlternativa.className += "animated-button";
             itemAlternativa.textContent = alternativasText[i];
             alternativasList.appendChild(itemAlternativa);
             if (i == 0) {
-                itemAlternativa.style.border = '1px solid #F8F9FA';
+                itemAlternativa.style.border = '2px solid #F8F9FA';
             }
         }
-        // CORREÇÃO AQUI
+
         for (let i = (tamanho / 2); i < tamanho; i++) {
             const itemAlternativa = document.createElement("li");
             itemAlternativa.className += "animated-button";
             itemAlternativa.textContent = alternativasText[i];
             itemAlternativa.style.backgroundColor = '#f4c708';
             itemAlternativa.style.border = '1px solid #f7e077';
-            respostasList.appendChild(itemAlternativa);
+            alternativas2List.appendChild(itemAlternativa);
         }
     }
 
-    if (listaExercicios[idEx].tipo == "ESCRITA"){
+    if (listaExercicios[idEx].tipo == "PREENCHIMENTO_DE_LACUNAS"){
+        const alternativasText = listaExercicios[idEx].alternativas;
+        const tamanho = alternativasText.length;
 
+        for (let i = 0; i < (tamanho / 2); i++) {
+            const itemAlternativa = document.createElement("li");
+            itemAlternativa.className += "lacuna-button";
+            itemAlternativa.textContent = alternativasText[i];
+            alternativasList.appendChild(itemAlternativa);
+        }
+
+        for (let i = (tamanho / 2); i < tamanho; i++) {
+            const itemAlternativa = document.createElement("li");
+            itemAlternativa.className += "lacuna-button";
+            itemAlternativa.textContent = alternativasText[i];
+            alternativas2List.appendChild(itemAlternativa);
+        }
     }
 }
 
@@ -48,13 +63,16 @@ function limpaTelaExercicio() {
 
     const respostasList = document.getElementById("alternativas2");
     respostasList.replaceChildren();
-    //precisa limpar inputs de enunciado?
+    
     respostaAluno.splice(0, respostaAluno.length);
+
+    idAlternativa = 0;
 }
 
 function confereResposta(respostaAluno, gabarito, tipo) {
-    if (tipo == "MULTIPLA_ESCOLHA") {
-        let respostaCorreta = true;
+    let respostaCorreta = true;
+    console.log(respostaAluno);
+    if (tipo == "MULTIPLA_ESCOLHA") { //acho que esse ta igual ao else
         if (respostaAluno.length !== gabarito.length) return false;
         respostaAluno.forEach(resposta => {
             if (gabarito.includes(resposta) == false) {
@@ -70,7 +88,6 @@ function confereResposta(respostaAluno, gabarito, tipo) {
                 respostaAluno.push(input.value);
             }
         }
-        let respostaCorreta = true;
         if (respostaAluno.length != gabarito.length) {
             respostaCorreta = false;
         } else {
@@ -88,6 +105,14 @@ function insereEnunciado(){
     if(listaExercicios[idEx].tipo == 'ESCRITA'){
         enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<input type="text" class="input-resposta">`); //3 underscore como input texto
         titulo.innerHTML = enunciado;
+    }
+    else if(listaExercicios[idEx].tipo == 'PREENCHIMENTO_DE_LACUNAS'){
+        enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<span class="lacuna"></span>`); //3 underscore como espaço vazio
+        titulo.innerHTML = enunciado;
+        lacunas = document.getElementsByClassName("lacuna");
+        for (let lacuna of lacunas){
+                lacuna.textContent = "________";
+            }
     }
     else{
         titulo.textContent = listaExercicios[idEx].enunciado;
@@ -114,30 +139,39 @@ atualizaTelaExercicio(listaExercicios, idEx);
 
 // --- Event Listeners ---
 document.getElementById('alternativas').addEventListener('click', function (event) {
-    if (listaExercicios[idEx].tipo != "CORRELACAO") {
-        if (listaExercicios[idEx].tipo == "MULTIPLA_ESCOLHA") {
-            respostaAluno.splice(0, respostaAluno.length);
+    const alternativaClick = event.target;
+    if (listaExercicios[idEx].tipo == "MULTIPLA_ESCOLHA") {
+        respostaAluno.splice(0, respostaAluno.length);
 
-            const alternativasList = document.getElementById("alternativas");
-            const itensDaLista = alternativasList.querySelectorAll('li');
+        const alternativasList = document.getElementById("alternativas");
+        const itensDaLista = alternativasList.querySelectorAll('li');
 
-            itensDaLista.forEach(button => {
-                button.style.backgroundColor = '#f07e24';
-            });
-        }
+        itensDaLista.forEach(button => {
+            button.style.backgroundColor = '#f07e24';
+        });
 
-        const alternativaClick = event.target;
         if (alternativaClick.tagName === 'LI') {
             alternativaClick.style.setProperty("background-color", '#c26018', "important");
             respostaAluno.push(alternativaClick.textContent);
+        }
+    }
+    else if(listaExercicios[idEx].tipo == "PREENCHIMENTO_DE_LACUNAS"){
+        lacunas = document.getElementsByClassName("lacuna");
+
+        if(idAlternativa < lacunas.length){
+            respostaAluno.push(alternativaClick.textContent);
+            alternativaClick.classList.add('used');
+            lacunas[idAlternativa].textContent = alternativaClick.textContent;
+            idAlternativa++;
         }
     }
 });
 
 document.getElementById('alternativas2').addEventListener('click', function (event) {
     const alternativaClick = event.target;
-    if (alternativaClick.tagName === 'LI') {
-        if (alternativaClick.style.backgroundColor != 'rgb(222, 182, 7)') {
+    if(listaExercicios[idEx].tipo == "CORRELACAO"){
+        if (alternativaClick.tagName === 'LI') {
+            alternativaClick.classList.add('used');
             alternativaClick.style.setProperty("background-color", '#deb607', "important");
             respostaAluno.push(alternativaClick.textContent);
 
@@ -145,13 +179,22 @@ document.getElementById('alternativas2').addEventListener('click', function (eve
             const itensDaLista = alternativasList.querySelectorAll('li');
             
             if(idAlternativa < itensDaLista.length) {
-                itensDaLista[idAlternativa].style.border = '1px solid #ffa35c';
-                itensDaLista[idAlternativa].style.backgroundColor = '#c26018';
+                itensDaLista[idAlternativa].classList.add('used');
                 idAlternativa++;
                 if(idAlternativa < itensDaLista.length){
-                    itensDaLista[idAlternativa].style.border = '1px solid #F8F9FA';
+                    itensDaLista[idAlternativa].style.border = '2px solid #F8F9FA';
                 }
             }
+        }
+    }
+    else if(listaExercicios[idEx].tipo == "PREENCHIMENTO_DE_LACUNAS"){
+        lacunas = document.getElementsByClassName("lacuna");
+
+        if(idAlternativa < lacunas.length){
+            respostaAluno.push(alternativaClick.textContent);
+            alternativaClick.classList.add('used');
+            lacunas[idAlternativa].textContent = alternativaClick.textContent;
+            idAlternativa++;
         }
     }
 });
@@ -165,7 +208,6 @@ document.getElementById('next-exercise-btn').addEventListener('click', function 
     if (idEx + 1 != qtdExercicios) {
         limpaTelaExercicio();
         idEx++;
-        idAlternativa = 0;
         //enunciado
         insereEnunciado();
         botoesExercicios[idEx].style.backgroundColor = '#f4c708';
