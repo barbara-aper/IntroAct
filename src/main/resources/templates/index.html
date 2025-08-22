@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -8,46 +8,53 @@
 
     <!--  referencia do css do bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!--  referencia do css pessoal -->
-    <link rel="stylesheet" th:href="@{css/style.css}">
-    <link rel="stylesheet" th:href="@{css/buttons.css}">
-    <link rel="stylesheet" th:href="@{css/navbar.css}">
-    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
 
     <!--  referencia do js do bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </head>
 
-<body >
-    <!-- nav bar -->
-    <div th:replace="fragments/navbar :: navbar"></div>
 
-    <div class="container p-5">
-        <div class="row">
+<body class="d-flex flex-column min-vh-100">
+    <!-- nav bar -->
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+    <main class="container flex-grow-1 d-flex">
+        <div class="row align-items-center">
+            
             <div class="col-md-7">
-                <h1 style="color: var(--white)"> VENHA EXERCITAR <span style="color: var(--blue)"> PROGRAMAÇÃO
-                    </span> EM  <span style="color: var(--orange)"> PYTHON </span> CONOSCO! </h1>
-                <p style="max-width: 72vh;"> O IntroAct, Introcomp Activities, é uma plataforma de atividades complementar e auxiliar ao curso Introcomp, oferecido gratuitamente por alunos da Ufes anualmente, cujo objetivo é democratizar o acesso ao mundo da programação por meio de aulas de Python. Por ser uma plataforma online, o IntroAct possibilita que não somente os alunos do Introcomp sejam beneficiados com tais atividades, mas também qualquer pessoa que queira aprender Python de forma descontraída.</p>
-                <p style="max-width: 72vh;">O IntroAct disponibiliza exercícios curtos e objetivos em Python, para tornar o aprendizado constante. O objetivo é ser uma “revisão de bolso” que mantenha conhecimentos essenciais de programação frescos na mente do usuário a todo e qualquer momento que ele quiser, servindo como complemento de um curso mais intensivo, como o Introcomp. As atividades do IntroAct possuem perguntas de múltipla escolha, exercícios de correlação, escrita e preenchimento de lacunas sobre conceitos fundamentais da programação, como estruturas condicionais e loops.</p>
+                <h1 class="display-4 fw-bold" style="color: var(--white);">
+                    QUE TAL EXERCITAR A SUA <span style="color: var(--blue);">PROGRAMAÇÃO</span> EM <span style="color: var(--orange);">PYTHON</span>?
+                </h1>
+                
+                <p class="lead my-4" style="color: var(--white); max-width: 90%;">
+                    O Introcomp Activities é uma plataforma de atividades complementar e auxiliar ao curso Introcomp, oferecido gratuitamente por alunos da Ufes anualmente, cujo objetivo é democratizar o acesso ao mundo da programação por meio de aulas de Python.
+                </p>
+                
                 <a th:href="@{/atividades}">
-                    <button class="small-btn">
-                        <label for=""> Começe agora </label>
+                    <button class="small-btn center">
+                        Comece agora
                     </button>
                 </a>
             </div>
-            <div class="col-md-5">
-                <img class="img-fluid" src="imagens\alunos.jpg" alt="OLA">
-            </div>
-        </div>
-    </div>
-    <!-- <img class="img-fluid h-100" src="imagens\alunos.jpg" alt="OLA"><img class="img-fluid h-100" src="imagens\alunos.jpg" alt="OLA"><img class="img-fluid h-100" src="imagens\alunos.jpg" alt="OLA"><img class="img-fluid h-100" src="imagens\alunos.jpg" alt="OLA"> -->
 
-    <footer>
-        <div th:replace="fragments/footer :: footer"> </div>
+            <div class="col-md-5">
+                <img class="img-fluid rounded shadow-lg" th:src="@{/imagens/alunos.jpg}" alt="Alunos">
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="mt-auto">
+        <div th:replace="~{fragments/footer :: footer}"></div>
     </footer>
 
 </body>
