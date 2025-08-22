@@ -22,9 +22,9 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- nav bar -->
-    <div th:replace="fragments/navbar :: navbar"></div>
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
 
     <div class="botoes-atividades">
         <div class="big-btn" 
@@ -111,8 +111,8 @@
 
     </div>
 
-    <footer>
-        <div th:replace="fragments/footer :: footer"> </div>
+    <footer class="mt-auto">
+        <div th:replace="~{fragments/footer :: footer}"></div>
     </footer>
 
 </body>

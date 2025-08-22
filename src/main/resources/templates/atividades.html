@@ -19,9 +19,10 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-    <div th:replace="fragments/navbar :: navbar"> </div>
+
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
 
     <h1 class="text-center" style="margin-top: 43px">
         Escolha um tema para estudar!
@@ -60,8 +61,8 @@
     </div>
     </div>
 
-    <footer>
-        <div th:replace="fragments/footer :: footer"> </div>
+    <footer class="mt-auto">
+        <div th:replace="~{fragments/footer :: footer}"></div>
     </footer>
 
 </body>
