@@ -64,6 +64,38 @@ Depois, para visualizar a documentação, abra o arquivo index.html
 target/site/apidocs/index.html
 ```
 
+## Como testar o código
+- JUnit e Mockito:
+
+Execute o comando abaixo para executar os testes automaticamente
+```
+mvn test
+```
+
+## Makefile
+Para facilitar a execução e funcionamento do sistema, alguns comandos bastante utilizados foram salvos no Makefile.
+
+Para executar o sistema:
+```
+make run
+```
+Para abrir a página web do projeto:
+```
+make opsys
+```
+Para gerar a documentação do projeto:
+```
+make doc
+```
+Para abrir a documentação do projeto:
+```
+make opdoc
+```
+Para executar os testes automáticos do sistema:
+```
+make test
+```
+
 ## Links úteis
 1. [Figma](https://www.figma.com/design/9x6Vid5HhN2tHv1BTIix64/IntroAct?node-id=0-1&p=f)
 2. [Proposta de Projeto](https://docs.google.com/document/d/1AbIpTwdoQhO9LcvEFK6X2nOIlPTqKL4j0UVvDhPbMDU/edit?tab=t.0)
