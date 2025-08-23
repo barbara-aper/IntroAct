@@ -36,14 +36,16 @@ body {
     background-size: 55px 55px;
 }
 
-h1 {
+p, h1, h2 { 
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 9vh;
     color: var(--white);
 }
 
+h1 {
+    font-size: 9vh;
+}
+
 p {
-    color: var(--white);
     text-align: justify;
 }
 

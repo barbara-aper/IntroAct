@@ -5,26 +5,28 @@
     width: 100%;
     background-color: var(--light-blue);
     color: #fff;
-    text-align: center;
     padding: 15px 0;
 }
 
 /* Estilização do conteúdo do footer */
 .footer-content {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 50px 0 50px;
 }
 
-/* Estilização da navegação do footer */
+.footer-content p, a{
+    color: var(--super-dark-blue);
+}
+
 .footer-nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    justify-items: left;
 }
 
 .footer-nav a {
-    color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin-right: 20px;
 }
 
 .footer-nav a:hover {
