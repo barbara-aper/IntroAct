@@ -1,7 +1,7 @@
 [
     {
         "nome": "Aritmética e Tipos de Dados",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "descricao": "É importante conhecer quais são as operações matemáticas possíveis de serem realizadas em Python, saber que as variáveis armazenam valores de diversos tipos de dados e que podemos ler entradas do usuário com input() e exibir saídas na tela com print().",
         "atividades": [
             {
                 "exercicios": [
@@ -10,22 +10,6 @@
                         "enunciado": "Qual função é utilizada para exibir algo na tela com Python?",
                         "dificuldade": 0,
                         "tipo": 0,
-                        "alternativas": ["print()", "show()", "display()", "echo()"],
-                        "gabarito": ["print()"]
-                    },
-                    {
-                        "idExercicio": "T101",
-                        "enunciado": "Qual função é utilizada para exibir ___ algo na tela com ___ Python?",
-                        "dificuldade": 0,
-                        "tipo": 3,
-                        "alternativas": ["print()", "show()", "display()", "echo()"],
-                        "gabarito": ["print()", "show()"]
-                    },
-                    {
-                        "idExercicio": "T101",
-                        "enunciado": "Qual função é utilizada ___ para exibir algo na tela com Python?",
-                        "dificuldade": 0,
-                        "tipo": 2,
                         "alternativas": ["print()", "show()", "display()", "echo()"],
                         "gabarito": ["print()"]
                     },
@@ -52,6 +36,22 @@
                         "tipo": 0,
                         "alternativas": ["7.0", "8.0", "7", "8"],
                         "gabarito": ["7"]
+                    },
+                    {
+                        "idExercicio": "T105",
+                        "enunciado": "Selecione as alternativas que preenchem os espaços em branco, respectivamente, para que a saída do código abaixo seja \"Bom dia, Joao\".<br>nome = ___<br>saudacao = \"Bom dia, {}!\".format(___)<br>print(saudacao)",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["João", "meu_nome", "Joao", "nome", "joao", "Bom dia, João"],
+                        "gabarito": ["Joao", "nome"]
+                    },
+                    {
+                        "idExercicio": "T106",
+                        "enunciado": "Preencha o espaço em branco:<br>Qual função transforma todos os caracteres de uma string para letras minúsculas?<br>Exemplo: \"iNtRoCoMp\".___ = \"introcomp\"",
+                        "dificuldade": 0,
+                        "tipo": 2,
+                        "alternativas": [],
+                        "gabarito": ["lower()"]
                     }
                 ],
                 "tema": "Aritmética e Tipos de Dados"
@@ -60,17 +60,57 @@
     },
     {
         "nome": "Lógica Booleana",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "descricao": "Lógica Booleana é crucial para a tomada de decisões na programação, sobretudo ao comparar valores com os operadores >, <. >=, <=, ==, !=, and, or e not. Essas comparações resultam em valores booleanos True e False.",
         "atividades": [
             {
                 "exercicios": [
                     {
-                        "idExercicio": 4,
-                        "enunciado": "Lógica Booleana",
+                        "idExercicio": "T201",
+                        "enunciado": "Preencha a expressão abaixo com um possível valor para que seu retorno seja True.<br>___.isupper()",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["100", "\"IntroAct\"", "\"introact\"", "\"INTROACT\""],
+                        "gabarito": ["\"INTROACT\""]
+                    },
+                    {
+                        "idExercicio": "T202",
+                        "enunciado": "Correlacione as duas colunas, de forma que os dois itens relacionados sejam equivalentes.",
+                        "dificuldade": 0,
+                        "tipo": 1,
+                        "alternativas": ["a and b", "not a or not b", "not (not a)", "not (a == b)", "a != b", "not (not a or not b)", "not (a and b)", "a"],
+                        "gabarito": ["not (not a or not b)", "not (a and b)", "a", "a != b"]
+                    },
+                    {
+                        "idExercicio": "T203",
+                        "enunciado": "Preencha a lacuna abaixo com o operador ideal para verificar se \"B\" é igual a \"b\".<br>\"B\" ___ \"b\"",
+                        "dificuldade": 0,
+                        "tipo": 2,
+                        "alternativas": [],
+                        "gabarito": ["=="]
+                    },
+                    {
+                        "idExercicio": "T204",
+                        "enunciado": "Qual alternativa resulta em False?",
                         "dificuldade": 0,
                         "tipo": 0,
-                        "alternativas": [],
-                        "gabarito": []
+                        "alternativas": ["(True and False) or True", "True and (False or True)", "False or True or False", "False and (True or False)"],
+                        "gabarito": ["False and (True or False)"]
+                    },
+                    {
+                        "idExercicio": "T205",
+                        "enunciado": "Qual a saída do código abaixo?<br>n1 = 2<br>n2 = 0<br>print(n1>n2)<br><br> Saída = ___",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["True", "False"],
+                        "gabarito": ["True"]
+                    },
+                    {
+                        "idExercicio": "T206",
+                        "enunciado": "Qual saída é obtida ao executar o código a seguir?<br>print(10<=\"IntroAct\")",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["True", "False", "O interpretador acusará erro no código", "Não é possivel determinar a saída"],
+                        "gabarito": ["O interpretador acusará erro no código"]
                     }
                 ],
                 "tema": "Lógica Booleana"
@@ -79,17 +119,57 @@
     },
     {
         "nome": "Estruturas Condicionais",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "descricao": "Estruturas condicionais são comandos em programação que permitem que um programa tome decisões e altere o seu fluxo de execução com base no resultado de uma condição (True ou False). As principais são if, else e elif.",
         "atividades": [
             {
                 "exercicios": [
                     {
-                        "idExercicio": 4,
-                        "enunciado": "Lógica Boleana",
+                        "idExercicio": "T0301",
+                        "enunciado": "Como é feita corretamente a declaração de uma estrutura condicional em Python?",
                         "dificuldade": 0,
                         "tipo": 0,
+                        "alternativas": ["if {condição}", "if (condição)", "if condição:", "if condição:"],
+                        "gabarito": ["if condição:"]
+                    },
+                    {
+                        "idExercicio": "T0302",
+                        "enunciado": "Complete a frase:<br>O operador else pode ser usado ___.",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["sempre", "apenas após um if", "apenas após um elif", "apenas após um if ou elif"],
+                        "gabarito": ["apenas após um if ou elif"]
+                    },
+                    {
+                        "idExercicio": "T0303",
+                        "enunciado": "Complete o código abaixo.<br>___ condition:<br>&nbsp;&nbsp;#faz uma coisa<br>else:<br>&nbsp;&nbsp;#faz outra coisa",
+                        "dificuldade": 0,
+                        "tipo": 2,
                         "alternativas": [],
-                        "gabarito": []
+                        "gabarito": ["if"]
+                    },
+                    {
+                        "idExercicio": "T0304",
+                        "enunciado": "No trecho de código a seguir, o else pode ser substituído por qual item?<br>if condition:<br>&nbsp;&nbsp;#faz uma coisa<br>else:<br>&nbsp;&nbsp;#faz outra coisa",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["elif condition", "if not condition", "if !condition", "else if condition"],
+                        "gabarito": ["if not condition"]
+                    },
+                    {
+                        "idExercicio": "T0305",
+                        "enunciado": "O que ocorre quando múltiplas estruturas condicionais if estiverem corretas?",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["Todos os blocos com if verdadeiro são executados", "Apenas o primeiro if é executado", "O programa não é executado", "O programa entra em loop"],
+                        "gabarito": ["Todos os blocos com if verdadeiro são executados"]
+                    },
+                    {
+                        "idExercicio": "T0306",
+                        "enunciado": "Qual a saída do código abaixo?<br>nota = 9<br>media = 7<br>if nota < media: <br>&nbsp;&nbsp;print(\"recuperação\")<br>elif nota > media and nota < 9:<br>&nbsp;&nbsp;print(\"aprovado\")<br>else:<br>&nbsp;&nbsp;print(\"nota excelente\")<br><br>Saída: ___",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["recuperação", "aprovado", "nota excelente", "não aprovado"],
+                        "gabarito": ["nota excelente"]
                     }
                 ],
                 "tema": "Estruturas Condicionais"
@@ -98,17 +178,57 @@
     },
     {
         "nome": "Estruturas de Repetição",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "descricao": "Permitem executar um bloco de código várias vezes, por um número pré-definido de vezes ou enquanto uma determinada condição for verdadeira, sendo eficientes ao automatizar tarefas repetitivas. As estruturas mais comuns são \"for\" e \"while\".",
         "atividades": [
             {
                 "exercicios": [
                     {
-                        "idExercicio": 4,
-                        "enunciado": "Lógica Boleana",
+                        "idExercicio": "T0401",
+                        "enunciado": "Complete a frase.<br>Iteração é ___.",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["o nome de uma volta no loop", "uma função que se repete", "sinônimo de loop", "uma função dentro de uma função"],
+                        "gabarito": ["o nome de uma volta no loop"]
+                    },
+                    {
+                        "idExercicio": "T0402",
+                        "enunciado": "Qual dos comandos abaixo interrompe um loop por completo?",
                         "dificuldade": 0,
                         "tipo": 0,
+                        "alternativas": ["pass", "continue", "break", "stop"],
+                        "gabarito": ["break"]
+                    },
+                    {
+                        "idExercicio": "T0403",
+                        "enunciado": "Correlacione os itens da coluna da esquerda com os itens da coluna da direita.",
+                        "dificuldade": 0,
+                        "tipo": 1,
+                        "alternativas": ["for", "while", "break", "continue", "enquanto uma condição for verdadeira", "para um número conhecido de repetições", "interrompe um loop", "pula para a próxima iteração"],
+                        "gabarito": ["para um número conhecido de repetições", "enquanto uma condição for verdadeira", "interrompe um loop", "pula para a próxima iteração"]
+                    },
+                    {
+                        "idExercicio": "T0404",
+                        "enunciado": "O for pode ser dividido em 3 partes obrigatórias, sendo 2 delas:",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["Variável e condição", "Condição e break", "Iterável e comandos", "Comandos e break"],
+                        "gabarito": ["Iterável e comandos"]
+                    },
+                    {
+                        "idExercicio": "T0405",
+                        "enunciado": "Qual a saída do código a seguir? Escreva os números separando-os por um espaço.<br>x=5<br>while x>0:<br>&nbsp;&nbsp;x-=1<br>&nbsp;&nbsp;print(x)<br><br>Saída: ___",
+                        "dificuldade": 0,
+                        "tipo": 2,
                         "alternativas": [],
-                        "gabarito": []
+                        "gabarito": ["4 3 2 1 0"]
+                    },
+                    {
+                        "idExercicio": "T0406",
+                        "enunciado": "Qual a saída do código a seguir?<br>num=0<br>for num in range(6,0,-2):<br>&nbsp;&nbsp;print(num)",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["0 2 4", "6 4 2", "6 4 2 0", "6 5 4 3 2 1", "2 4 6"],
+                        "gabarito": ["6 4 2"]
                     }
                 ],
                 "tema": "Estruturas de Repetição"
@@ -117,17 +237,57 @@
     },
     {
         "nome": "Listas",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "descricao": "A lista é uma coleção de itens ordenada, mutável e heterogénea, delimitada por colchetes []. Elas permitem acessar, adicionar e remover elementos através de índices numéricos, a partir do 0. São usadas para agrupar múltiplos dados numa única variável.",
         "atividades": [
             {
                 "exercicios": [
                     {
-                        "idExercicio": 4,
-                        "enunciado": "Lógica Boleana",
+                        "idExercicio": "T0501",
+                        "enunciado": "Complete a frase.<br>Uma lista ___.",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["é um conjunto de inteiros", "é um grupo de itens indexados", "são itens indefinidos", "são etapas de uma função"],
+                        "gabarito": ["é um grupo de itens indexados"]
+                    },
+                    {
+                        "idExercicio": "T0502",
+                        "enunciado": "Correlacione os itens da coluna da esquerda com os itens da coluna da direita.",
+                        "dificuldade": 0,
+                        "tipo": 1,
+                        "alternativas": ["len()", "count()", "pop()", "remove()", "append()", "insert()", "contabiliza quantas vezes um item aparece", "adiciona um item ao final", "adiciona um item numa posição específica", "conta quantos itens a lista possui", "remove um item específico", "remove o item de um índice específico"],
+                        "gabarito": ["conta quantos itens a lista possui", "contabiliza quantas vezes um item aparece", "remove o item de um índice específico", "remove um item específico", "adiciona um item ao final", "adiciona um item numa posição específica"]
+                    },
+                    {
+                        "idExercicio": "T0503",
+                        "enunciado": "O que o operador in retorna como resultado?",
                         "dificuldade": 0,
                         "tipo": 0,
+                        "alternativas": ["Tamanho da lista", "Índice do item na lista", "Se a lista existe", "True ou False"],
+                        "gabarito": ["True ou False"]
+                    },
+                    {
+                        "idExercicio": "T0504",
+                        "enunciado": "Qual item será removido no código abaixo? Digite apenas o valor do item.<br>numeros = [7, 5, 3, 1]<br>numeros.pop(1)<br><br>Resposta = ___",
+                        "dificuldade": 0,
+                        "tipo": 2,
                         "alternativas": [],
-                        "gabarito": []
+                        "gabarito": ["5"]
+                    },
+                    {
+                        "idExercicio": "T0505",
+                        "enunciado": "Qual a saída do código a seguir?<br>numeros = [1, 5, 3, 2, 6, 4]<br>numeros.sort()<br>numeros.append(7)<br>print(numeros[1::2])",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["[5, 2, 4]", "[5, 2, 7]", "[2, 4, 6]", "[1, 3, 6]", "[1, 3, 5]"],
+                        "gabarito": ["[2, 4, 6]"]
+                    },
+                    {
+                        "idExercicio": "T0506",
+                        "enunciado": "Retornam, respectivamente, o tamanho, o maior e o menor valor da lista:",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["sort(), max(), smaller()", "len(), max(), min()", "len(), upper(), lower()", "copy(), upper(), min()"],
+                        "gabarito": ["len(), max(), min()"]
                     }
                 ],
                 "tema": "Listas"
@@ -136,17 +296,57 @@
     },
     {
         "nome": "Funções",
-        "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.",
+        "descricao": "Uma função é um bloco de código reutilizável que executa uma tarefa específica, recebendo parâmetros (entradas) e, opcionalmente, retornando um valor (saída) através da instrução return. Elas são definidas com a palavra-chave def.",
         "atividades": [
             {
                 "exercicios": [
                     {
-                        "idExercicio": 4,
-                        "enunciado": "Lógica Boleana",
+                        "idExercicio": "T0601",
+                        "enunciado": "Complete a frase.<br>A modularização de um código é ___.",
+                        "dificuldade": 0,
+                        "tipo": 3,
+                        "alternativas": ["dividir em partes menores", "criar listas", "listar funções", "ampliar sua complexidade"],
+                        "gabarito": ["dividir em partes menores"]
+                    },
+                    {
+                        "idExercicio": "T0602",
+                        "enunciado": "Complete o código abaixo para que \"funcao1\" seja considerada uma função.<br>___ funcao1():<br>&nbsp;&nbsp;print(\"Hello, World!\")",
+                        "dificuldade": 0,
+                        "tipo": 2,
+                        "alternativas": [],
+                        "gabarito": ["def"]
+                    },
+                    {
+                        "idExercicio": "T0603",
+                        "enunciado": "Dado o código a seguir, correlacione as duas colunas com base no que cada uma das palavras representa para a função.<br>def ehPar(num):<br>&nbsp;&nbsp;resultado = (num%2 == 0)<br>&nbsp;&nbsp;return resultado",
+                        "dificuldade": 0,
+                        "tipo": 1,
+                        "alternativas": ["def", "ehPar", "num", "resultado", "retorno da função", "parâmetro da função", "define a função", "nome da função"],
+                        "gabarito": ["define a função", "nome da função", "parâmetro da função", "retorno da função"]
+                    },
+                    {
+                        "idExercicio": "T0604",
+                        "enunciado": "Qual o nome dado a uma variável declarada no cabeçalho de uma função?",
                         "dificuldade": 0,
                         "tipo": 0,
-                        "alternativas": [],
-                        "gabarito": []
+                        "alternativas": ["Argumento", "Variável de entrada", "Parâmetro", "Valor padrão"],
+                        "gabarito": ["Parâmetro"]
+                    },
+                    {
+                        "idExercicio": "T0605",
+                        "enunciado": "São exemplos de funções já definidas em Python:",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["input(), print()", "menu(), bhaskara()", "soma(), primo()", "verifica_par(), imprime_maior()"],
+                        "gabarito": ["input(), print()"]
+                    },
+                    {
+                        "idExercicio": "T0606",
+                        "enunciado": "Alguns dados passados como argumento não são alterados fora da função. Isso denomina-se:",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["passagem direta", "passagem por referência", "return", "passagem por cópia"],
+                        "gabarito": ["passagem por cópia"]
                     }
                 ],
                 "tema": "Funções"

@@ -115,7 +115,7 @@ function insereEnunciado(){
             }
     }
     else{
-        titulo.textContent = listaExercicios[idEx].enunciado;
+        titulo.innerHTML = listaExercicios[idEx].enunciado;
     }
 }
 
