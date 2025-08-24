@@ -27,9 +27,13 @@
 
     <div th:replace="~{fragments/navbar :: navbar}"></div>
 
-    <h1 class="text-center" style="margin-top: 43px">
-        Escolha um tema para estudar!
-    </h1>
+    <div class="text-center">
+        <h1 style="margin-top: 43px"> 
+            VAMOS PRATICAR!
+            <h2> ESCOLHA UM TEMA </h2>
+        </h1>
+    </div>
+    
 
     <div class="botoes-atividades">
     <div th:each="tema, idxTema : ${temas}" class="text-center mb-3">

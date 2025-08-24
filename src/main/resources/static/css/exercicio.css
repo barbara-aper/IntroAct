@@ -1,7 +1,7 @@
 .container-alternativas {
     display: flex;
     justify-content: center; /* Centraliza as listas horizontalmente */
-    gap: 20px; /* Adiciona um espaço entre as listas */
+    margin: 0 20px 0 20px; /* Adiciona um espaço entre as listas */
 }
 
 .card-exercicio {
