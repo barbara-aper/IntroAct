@@ -3,3 +3,17 @@
     justify-content: center; /* Centraliza as listas horizontalmente */
     gap: 20px; /* Adiciona um espaço entre as listas */
 }
+
+.card-exercicio {
+    color: var(--white);
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 17px;
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: var(--blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 20px;
+    box-shadow: 0px 6px 0px var(--dark-blue);
+    overflow: hidden;
+}
