@@ -19,9 +19,12 @@ Classes:
 -- geral: tela do exercicio
 1. Brb: footer(redes sociais) + terminar index
 2. Ray: contatos + faq + testes
-3. Ammm: descobrir como fazer os exercicio + json
+3. Ammm: correcao final exercicio/nota 
 
--- criar exercicios
+-- tema com duas atividades
+-- link do notebook (tema)
 -- substituir os txt lorem ipsum com algo real (contato, index)
 -- fotos de vdd
 -- espalhar logo introact pelas paginas
+-- slides apresentação
+-- video
