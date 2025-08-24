@@ -1,4 +1,4 @@
-
+/** --------------------------------------------------------- */
 /** Botao do index.html */
 .smaller-btn{
     padding: 5px 10px;
@@ -17,7 +17,8 @@
     background-color: var(--dark-orange);
 }
 
-
+/** --------------------------------------------------------- */
+/** Small */
 .small-btn{
     color: var(--white);
     position: relative;
@@ -40,7 +41,9 @@
   top: 2px;
 }
 
-.big-btn{
+/** --------------------------------------------------------- */
+/** Botao grande */
+.big-btn {
     color: var(--white);
     width: 70vh;
     height: 8vh;
@@ -57,7 +60,7 @@
     overflow: hidden;
 }
 
-
+/** --------------------------------------------------------- */
 /** area do botao das atividades */
 .botoes-atividades {
     display: flex;
@@ -65,6 +68,7 @@
     align-items: center;
     justify-content: center;
     padding: 30px 0;
+
     gap: 10px;
 }
 
@@ -100,6 +104,8 @@
     opacity: 0.5;
 }
 
+/** --------------------------------------------------------- */
+/** Lacuna  */
 .lacuna-button {
     color: var(--white);
     position: relative;
