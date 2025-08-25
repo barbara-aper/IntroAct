@@ -49,6 +49,22 @@ p {
     text-align: justify;
 }
 
+.input-resposta {
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 10px;
+    color: var(--super-dark-blue);
+    padding-left: 10px;
+}
+
+.input-resposta:focus {
+    outline: 3px solid var(--super-dark-blue)
+}
+
+.input-resposta::placeholder {
+    color: var(--blue)
+}
+
 .flex-wrapper {
     display: flex;
     min-height: 100vh;
