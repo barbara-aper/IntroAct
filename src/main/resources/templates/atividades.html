@@ -28,7 +28,7 @@
     <div th:replace="~{fragments/navbar :: navbar}"></div>
 
     <div class="text-center">
-        <h1 style="margin-top: 43px"> 
+        <h1 style="margin-top: 43px;"> 
             VAMOS PRATICAR!
             <h2> ESCOLHA UM TEMA </h2>
         </h1>
@@ -49,9 +49,10 @@
 
         <div class="collapse" th:id="'collapse' + ${idxTema.index}">
             <div class="card card-body mt-2 area-collapse-custom" >
-                Conteúdo para o tema: <strong th:text="${tema.nome}"> </strong>.
+                Conteúdo para o tema: <strong th:text="${tema.nome}"> </strong>
                 <br>
                 <span th:text="${tema.descricao}"> </span>
+                <a th:href="${tema.link}" target="_blank" class="text-decoration-none"> SAIBA MAIS AQUI </a>
 
                 <ul class="wrapper">
                     <li th:each="atividade, idxAtividade : ${tema.atividades}" class="wrapper-li">

@@ -2,6 +2,7 @@
     {
         "nome": "Aritmética e Tipos de Dados",
         "descricao": "É importante conhecer quais são as operações matemáticas possíveis de serem realizadas em Python, saber que as variáveis armazenam valores de diversos tipos de dados e que podemos ler entradas do usuário com input() e exibir saídas na tela com print().",
+        "link" : "https://www.google.com"
         "atividades": [
             {
                 "exercicios": [
