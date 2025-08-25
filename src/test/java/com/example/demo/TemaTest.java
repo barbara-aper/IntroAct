@@ -12,6 +12,7 @@ public class TemaTest {
     public void init() {
         this.tema = new Tema();
         this.tema.setNome("Aritmética e Tipos de Dados");
+        this.tema.setLink("https://colab.research.google.com/drive/14z8nnNX9MXQ4WUoSX1pO5LtRqOo7E-XE");
         this.tema.setDescricao("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.");
     }
 
@@ -25,6 +26,12 @@ public class TemaTest {
     public void descricaoCorreta() {
         String expected = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae metus sed leo finibus elementum at quis augue.";
         assertEquals(expected, this.tema.getDescricao());
+    }
+
+    @Test
+    public void linkCorreto() {
+        String expected = "https://colab.research.google.com/drive/14z8nnNX9MXQ4WUoSX1pO5LtRqOo7E-XE";
+        assertEquals(expected, this.tema.getLink());
     }
 
     @Test

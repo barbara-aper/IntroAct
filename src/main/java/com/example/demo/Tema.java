@@ -19,6 +19,7 @@ public class Tema {
     
     private String nome;
     private String descricao;
+    private String link;
     @OneToMany(cascade=CascadeType.PERSIST) 
     private List<Atividade> atividades = new ArrayList<>();
 
@@ -36,6 +37,10 @@ public class Tema {
      */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     /**
@@ -76,6 +81,10 @@ public class Tema {
      */
     public String getDescricao() {
         return this.descricao;
+    }
+
+    public String getLink() {
+        return this.link;
     }
 
     /**
