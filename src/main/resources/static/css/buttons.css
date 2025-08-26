@@ -104,6 +104,13 @@
     top: 2px;
 }
 
+.animated-button.used {
+    border: 1px solid var(--light-orange) !important; 
+    background-color: #c26018 !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
 /** --------------------------------------------------------- */
 /** Lacuna  */
 .lacuna-button {
