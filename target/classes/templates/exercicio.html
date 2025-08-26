@@ -17,6 +17,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link rel="stylesheet" th:href="@{/css/buttons.css}">
     <link rel="stylesheet" th:href="@{/css/exercicio.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
 
     <!--  referencia do js do bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -26,22 +27,34 @@
 </head>
 
 <body>
-    <div style="margin: 1%;">
-        <a th:href="@{/atividades}">
-            <button class="small-btn">
-                    <label class="text-white" style="font-family: 'Roboto', sans-serif;"> ↩ </label>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid p-1 position-relative">
+            
+            <a th:href="@{/atividades}" class="position-absolute start-0 ms-3">
+                <i class="bi bi-arrow-left fs-4 ms-5" style="color: var(--white);"></i>
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <h3 class="text-center m-0" style="color: var(--white);" th:text="${atividade.tema}"></h3>
+            </div>
+
+            <a th:href="@{/index}" class="navbar-brand position-absolute end-0 me-5 d-none d-lg-block">
+                <img class="img-fluid" style="width: 135px;" th:src="@{/imagens/logoIntroAct.png}" alt="Logo do IntroAct">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             </button>
-        </a>
-        <h3 class="text-center" style="color: var(--white)" th:text="${atividade.tema}"></h1>
-    </div>
+        </div>
+    </nav>
 
     <div class="d-flex justify-content-center">
-        <div class="card-exercicio">
+        <div>
             <p class="lead my-4" id="enunciadoExercicio" style="color: var(--white);"> </p>
 
             <div class="text-center container-alternativas" style="margin: 1%;">    
-                <ul class="botoes-atividades" id="alternativas"></ul>
-                <ul class="botoes-atividades" id="alternativas2"></ul>
+                <ul class="botoes-atividades list-unstyled" id="alternativas"></ul>
+                <ul class="botoes-atividades list-unstyled" id="alternativas2"></ul>
             </div>
         </div>
     </div>

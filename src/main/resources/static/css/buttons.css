@@ -20,25 +20,26 @@
 /** --------------------------------------------------------- */
 /** Small */
 .small-btn{
-    color: var(--white);
-    position: relative;
-    display: inline-block;
-    padding: 10px 25px;
-    font-size: 17px;
+    --primary-color: var(--blue);
+    --secondary-color: var(--white);
+    --hover-color: var(--dark-blue);
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 50px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: normal;
     font-family: "Roboto Condensed", sans-serif;
-    background-color: var(--blue);
-    border: 1px solid var(--light-blue);
-    border-radius: 100px;
     cursor: pointer;
-    box-shadow: 0px 6px 0px var(--dark-blue);
-    transition: all 0.1s;
-    overflow: hidden;
 }
-
 .small-btn:hover {
-  box-shadow: 0px 2px 0px var(--dark-blue);
-  position: relative;
-  top: 2px;
+    background-color: var(--hover-color);
+    position: relative;
+    top: 2px;
 }
 
 /** --------------------------------------------------------- */
@@ -73,54 +74,54 @@
 }
 
 .animated-button {
-    color: var(--white);
-    position: relative;
-    display: inline-block;
-    /* padding: 12px 250px; */
     width: 70vh;
-    height: 7vh;
-    font-size: 20px;
-    background-color: var(--dark-orange);
-    border: 1px solid var(--light-orange);
-    border-radius: 100px;
+    --primary-color: var(--dark-orange);
+    --secondary-color: var(--white);
+    --hover-color: var(--super-dark-orange);
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 50px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-size: larger;
+    font-family: "Roboto Condensed", sans-serif;
     cursor: pointer;
-    box-shadow: 0px 6px 0px var(--super-dark-orange);
-    transition: all 0.1s;
-    overflow: hidden;
 }
-
 
 /** animacao de quando passa o mouse em cima */
 .animated-button:hover {
-    box-shadow: 0px 2px 0px var(--dark-orange);
+    background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }
 
-.animated-button.used {
-    border: 1px solid var(--light-orange) !important; 
-    background-color: #c26018 !important;
-    cursor: not-allowed;
-    opacity: 0.5;
+.animated-button:active {
+        position: relative;
+    top: 2px;
 }
 
 /** --------------------------------------------------------- */
 /** Lacuna  */
 .lacuna-button {
-    color: var(--white);
-    position: relative;
-    display: inline-block;
-    padding: 3px 25px;
-    width: 50vh;
-    height: 8vh;
-    font-size: 20px;
-    background-color: var(--dark-orange);
-    border: 1px solid var(--light-orange);
-    border-radius: 100px;
+    --primary-color: var(--dark-orange);
+    --secondary-color: var(--white);
+    --hover-color: var(--super-dark-orange);
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 50px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-size: larger;
+    font-family: "Roboto Condensed", sans-serif;
     cursor: pointer;
-    box-shadow: 0px 6px 0px var(--super-dark-orange);
-    transition: all 0.1s;
-    overflow: hidden;
 
     margin: 5px;
     display: flex;
@@ -132,7 +133,7 @@
 
 /** animacao de quando passa o mouse em cima */
 .lacuna-button:hover {
-    box-shadow: 0px 2px 0px var(--dark-orange);
+    background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }

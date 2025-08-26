@@ -12,10 +12,10 @@
          <!--  referencia do css dos icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" th:href="@{css/style.css}">
-    <link rel="stylesheet" th:href="@{css/buttons.css}">
-    <link rel="stylesheet" th:href="@{css/navbar.css}">
-    <link rel="stylesheet" th:href="@{css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/buttons.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
     <link rel="stylesheet" th:href="@{/css/social.css}">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -28,9 +28,9 @@
     <div th:replace="~{fragments/navbar :: navbar}"></div>
 
     <div class="text-center">
-        <h1 style="margin-top: 43px;"> 
+        <h1 class="display-4 fw-bold" style="margin-top: 32px; color: var(--white);"> 
             VAMOS PRATICAR!
-            <h2> ESCOLHA UM TEMA </h2>
+            <h2 class="lead"> ESCOLHA UM TEMA </h2>
         </h1>
     </div>
     

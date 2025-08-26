@@ -36,6 +36,12 @@ body {
     background-size: 55px 55px;
 }
 
+body.exercicios-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--dark-blue);
+}
+
 p, h1, h2 { 
     font-family: "Roboto Condensed", sans-serif;
     color: var(--white);
@@ -50,19 +56,19 @@ p {
 }
 
 .input-resposta {
-    background-color: var(--light-blue);
+    background-color: var(--dark-orange);
     border: none;
-    border-radius: 10px;
-    color: var(--super-dark-blue);
+    border-radius: 50px;
     padding-left: 10px;
+    color: var(--white);
 }
 
 .input-resposta:focus {
-    outline: 3px solid var(--super-dark-blue)
+    outline: 2px solid var(--white)
 }
 
 .input-resposta::placeholder {
-    color: var(--blue)
+    color: var(--white)
 }
 
 .flex-wrapper {
