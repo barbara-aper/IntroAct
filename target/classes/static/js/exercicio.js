@@ -29,10 +29,11 @@ function atualizaTelaExercicio(listaExercicios, idEx) {
 
         for (let i = (tamanho / 2); i < tamanho; i++) {
             const itemAlternativa = document.createElement("li");
-            itemAlternativa.className += "animated-button";
+            itemAlternativa.className += "animated-button-yellow";
             itemAlternativa.textContent = alternativasText[i];
-            itemAlternativa.style.backgroundColor = '#f4c708';
-            itemAlternativa.style.border = '1px solid #f7e077';
+            //itemAlternativa.style.backgroundColor = '#f4c708';
+            //itemAlternativa.style.border = '1px solid #f7e077';
+            //itemAlternativa.style.setProperty('--hover-color', "#deb607", "important");
             alternativas2List.appendChild(itemAlternativa);
         }
     }
@@ -80,7 +81,7 @@ function confereResposta(respostaAluno, gabarito, tipo) {
             }
         });
         return respostaCorreta;
-    } else { // CORRELACAO E ESCRITA
+    } else { // CORRELACAO, LACUNA E ESCRITA
         if(tipo == 'ESCRITA'){
             escritaInput = document.getElementsByClassName("input-resposta");
             console.log(escritaInput);
