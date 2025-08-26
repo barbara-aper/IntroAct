@@ -2,7 +2,7 @@
     {
         "nome": "Aritmética e Tipos de Dados",
         "descricao": "É importante conhecer quais são as operações matemáticas possíveis de serem realizadas em Python, saber que as variáveis armazenam valores de diversos tipos de dados e que podemos ler entradas do usuário com input() e exibir saídas na tela com print().",
-        "link" : "https://www.google.com"
+        "link" : "https://colab.research.google.com/drive/1cgw1x3Yz5FxWOwuYhToItc3L0EThfq9T?usp=drive_link",
         "atividades": [
             {
                 "exercicios": [
@@ -56,12 +56,26 @@
                     }
                 ],
                 "tema": "Aritmética e Tipos de Dados"
+            },
+            {
+                "exercicios": [
+                    {
+                        "idExercicio": "T101",
+                        "enunciado": "Qual função é utilizada para exibir algo na tela com Python?",
+                        "dificuldade": 0,
+                        "tipo": 0,
+                        "alternativas": ["print()", "show()", "display()", "echo()"],
+                        "gabarito": ["print()"]
+                    }
+                ],
+                "tema": "Aritmética e Tipos de Dados"
             }
         ]
     },
     {
         "nome": "Lógica Booleana",
         "descricao": "Lógica Booleana é crucial para a tomada de decisões na programação, sobretudo ao comparar valores com os operadores >, <. >=, <=, ==, !=, and, or e not. Essas comparações resultam em valores booleanos True e False.",
+        "link" : "https://colab.research.google.com/drive/1oVMbw1itQxF38FoxZMcVxSwRxWnbz6cw?usp=drive_link",
         "atividades": [
             {
                 "exercicios": [
@@ -121,6 +135,7 @@
     {
         "nome": "Estruturas Condicionais",
         "descricao": "Estruturas condicionais são comandos em programação que permitem que um programa tome decisões e altere o seu fluxo de execução com base no resultado de uma condição (True ou False). As principais são if, else e elif.",
+        "link" : "https://drive.google.com/file/d/1P8bS5y-MS9XRw7V5V8FD5NFYNRGD4nHZ/view?usp=drive_link",
         "atividades": [
             {
                 "exercicios": [
@@ -129,7 +144,7 @@
                         "enunciado": "Como é feita corretamente a declaração de uma estrutura condicional em Python?",
                         "dificuldade": 0,
                         "tipo": 0,
-                        "alternativas": ["if {condição}", "if (condição)", "if condição:", "if condição:"],
+                        "alternativas": ["if {condição}", "if (condição)", "if condição:", "if condição"],
                         "gabarito": ["if condição:"]
                     },
                     {
@@ -180,6 +195,7 @@
     {
         "nome": "Estruturas de Repetição",
         "descricao": "Permitem executar um bloco de código várias vezes, por um número pré-definido de vezes ou enquanto uma determinada condição for verdadeira, sendo eficientes ao automatizar tarefas repetitivas. As estruturas mais comuns são \"for\" e \"while\".",
+        "link" : "https://drive.google.com/file/d/1iY6jxNRqOPDvYLP0XbAQdSZV4EHyh3Yo/view?usp=drive_link",
         "atividades": [
             {
                 "exercicios": [
@@ -239,6 +255,7 @@
     {
         "nome": "Listas",
         "descricao": "A lista é uma coleção de itens ordenada, mutável e heterogénea, delimitada por colchetes []. Elas permitem acessar, adicionar e remover elementos através de índices numéricos, a partir do 0. São usadas para agrupar múltiplos dados numa única variável.",
+        "link" : "https://colab.research.google.com/drive/1okZBCeVG-E8hoOR_q4zb-HclF74X3NCv?usp=drive_link",
         "atividades": [
             {
                 "exercicios": [
@@ -298,6 +315,7 @@
     {
         "nome": "Funções",
         "descricao": "Uma função é um bloco de código reutilizável que executa uma tarefa específica, recebendo parâmetros (entradas) e, opcionalmente, retornando um valor (saída) através da instrução return. Elas são definidas com a palavra-chave def.",
+        "link" : "https://colab.research.google.com/drive/1UOrl5gpoDax4hwhrvVPLYej5_VOyZFQT?usp=drive_link",
         "atividades": [
             {
                 "exercicios": [
