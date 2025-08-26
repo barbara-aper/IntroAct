@@ -103,7 +103,7 @@ function confereResposta(respostaAluno, gabarito, tipo) {
 
 function insereEnunciado(){
     if(listaExercicios[idEx].tipo == 'ESCRITA'){
-        enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<input type="text" class="input-resposta" placeholder="  Digite aqui sua resposta">`); //3 underscore como input texto
+        enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<input type="text" class="input-resposta" placeholder="Digite aqui sua resposta">`); //3 underscore como input texto
         titulo.innerHTML = enunciado;
     }
     else if(listaExercicios[idEx].tipo == 'PREENCHIMENTO_DE_LACUNAS'){
