@@ -33,8 +33,8 @@
             <h2 class="lead"> ESCOLHA UM TEMA </h2>
         </h1>
     </div>
-    
 
+    <!-- Botoes de cada tema -->
     <div class="botoes-atividades">
     <div th:each="tema, idxTema : ${temas}" class="text-center mb-3">
         <button class="animated-button"
@@ -44,16 +44,18 @@
                 aria-expanded="false"
                 th:aria-controls="'#collapse' + ${idxTema.index}">
             <span th:text="${tema.nome}"> </span>
-            <!-- <span> </span> -->
         </button>
 
+        <!-- Área do botao que se extende ao clicar -->
         <div class="collapse" th:id="'collapse' + ${idxTema.index}">
+            <!-- Conteúdo dentro da extensão do botão -->
             <div class="card card-body mt-2 area-collapse-custom" >
                 Conteúdo para o tema: <strong th:text="${tema.nome}"> </strong>
                 <br>
                 <span th:text="${tema.descricao}"> </span>
                 <a th:href="${tema.link}" target="_blank" class="text-decoration-none"> SAIBA MAIS AQUI </a>
-
+                
+                <!-- Bolinhas com index de atividades do tema -->
                 <ul class="wrapper">
                     <li th:each="atividade, idxAtividade : ${tema.atividades}" class="wrapper-li">
                         <a th:href="@{'/exercicio/' + ${idxTema.index} + '/' + ${idxAtividade.index}}">
