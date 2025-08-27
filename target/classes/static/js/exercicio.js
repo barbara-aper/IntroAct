@@ -60,6 +60,8 @@ function atualizaTelaExercicio(listaExercicios, idEx) {
 
 //limpa a tela de exercício para receber um próximo
 function limpaTelaExercicio() {
+    titulo.textContent = "";
+
     const alternativasList = document.getElementById("alternativas");
     alternativasList.replaceChildren();
 
@@ -74,11 +76,9 @@ function limpaTelaExercicio() {
 //confere se a resposta enviada está igual ao gabarito
 function confereResposta(respostaAluno, gabarito, tipo) {
     let respostaCorreta = true;
-    console.log(respostaAluno);
 
     if(tipo == 'ESCRITA'){
         escritaInput = document.getElementsByClassName("input-resposta");
-        console.log(escritaInput);
         for (let input of escritaInput){
             respostaAluno.push(input.value);
         }
@@ -98,6 +98,49 @@ function confereResposta(respostaAluno, gabarito, tipo) {
     return respostaCorreta;
 }
 
+//exibe quantidade de acertos e o gabarito das questões que o usuário errou
+function exibeGabarito(){
+    const botao = document.getElementById('next-exercise-div');
+    botao.remove();
+ 
+    const alternativasList = document.getElementById("alternativas");
+    const alternativas2List = document.getElementById("alternativas2");
+    alternativasList.remove();
+    alternativas2List.remove();
+ 
+    const porcentAcerto = parseFloat(listaExercicios.length - listaErros.length)/listaExercicios.length;
+    if(porcentAcerto>=0.75){
+        titulo.textContent = "Parabéns!! Você acertou " + (listaExercicios.length - listaErros.length) + "/" + (listaExercicios.length) + " questões"
+    }
+    else if(porcentAcerto>=0.5){
+        titulo.textContent = "Você acertou " + (listaExercicios.length - listaErros.length) + "/" + (listaExercicios.length) + " questões"
+    }
+    else{
+        titulo.textContent = "Que tal revisar mais um pouco? Você acertou " + (listaExercicios.length - listaErros.length) + "/" + (listaExercicios.length) + " questões"
+    }
+
+    if(listaErros.length>0){
+        const divGabarito = document.getElementById("divGabarito");
+        divGabarito.className += "card-exercicio";
+    
+        let gabaritoTitulo = document.getElementById("gabaritoTitulo");
+        let gabarito = document.getElementById("gabaritoExercicio");
+        let txtGabarito = "";
+        
+        gabaritoTitulo.textContent = "Gabarito"
+
+        for(let i = 0; i < listaErros.length; i++){
+            let id = listaErros[i];
+            let num = parseInt(id)+1;
+            txtGabarito += "Exercício " + num + ":<br>Enunciado: ";
+            txtGabarito += listaExercicios[id].enunciado + "<br>Gabarito: ";
+            txtGabarito += listaExercicios[id].gabarito;
+            txtGabarito += "<br><br>";
+        }
+        gabarito.innerHTML = txtGabarito;
+    }
+} 
+ 
 //insere o enunciado na tela
 function insereEnunciado(){
     if(listaExercicios[idEx].tipo == 'ESCRITA'){ //trata a existencia de input
@@ -105,7 +148,7 @@ function insereEnunciado(){
         titulo.innerHTML = enunciado;
     }
     else if(listaExercicios[idEx].tipo == 'PREENCHIMENTO_DE_LACUNAS'){ //trata a existencia de espaço para lacunas
-        enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<span class="lacuna"></span>`); //3 underscore como espaço vazio
+        enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<span class="lacuna" style="color: var(--dark-orange);"></span>`); //3 underscore como espaço vazio
         titulo.innerHTML = enunciado;
         lacunas = document.getElementsByClassName("lacuna");
         for (let lacuna of lacunas){
@@ -209,11 +252,21 @@ document.getElementById('next-exercise-btn').addEventListener('click', function 
         botoesExercicios[idEx].style.backgroundColor = '#f2351f';
     }
     //verifica se há um próximo exercício e o exibe caso exista
-    if (idEx + 1 != qtdExercicios) {
+    if(idEx + 1 != qtdExercicios){
         limpaTelaExercicio();
         idEx++;
         insereEnunciado();
         botoesExercicios[idEx].style.backgroundColor = '#f4c708';
         atualizaTelaExercicio(listaExercicios, idEx);
+    }
+    else{
+        limpaTelaExercicio();
+        listaErros = [];
+        for (let i = 0; i < botoesExercicios.length; i++){
+            if(botoesExercicios[i].style.backgroundColor === 'rgb(242, 53, 31)'){
+                listaErros.push(i);
+            }
+        }
+        exibeGabarito();
     }
 });
