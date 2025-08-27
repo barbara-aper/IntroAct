@@ -43,8 +43,8 @@
                         "enunciado": "Selecione as alternativas que preenchem os espaços em branco, respectivamente, para que a saída do código abaixo seja \"Bom dia, Joao\".<br>nome = ___<br>saudacao = \"Bom dia, {}!\".format(___)<br>print(saudacao)",
                         "dificuldade": 0,
                         "tipo": 3,
-                        "alternativas": ["João", "meu_nome", "Joao", "nome", "joao", "Bom dia, João"],
-                        "gabarito": ["Joao", "nome"]
+                        "alternativas": ["\"João\"", "meu_nome", "\"Joao\"", "nome", "\"joao\"", "Bom dia, João"],
+                        "gabarito": ["\"Joao\"", "nome"]
                     },
                     {
                         "idExercicio": "T106",
@@ -135,7 +135,7 @@
     {
         "nome": "Estruturas Condicionais",
         "descricao": "Estruturas condicionais são comandos em programação que permitem que um programa tome decisões e altere o seu fluxo de execução com base no resultado de uma condição (True ou False). As principais são if, else e elif.",
-        "link" : "https://drive.google.com/file/d/1P8bS5y-MS9XRw7V5V8FD5NFYNRGD4nHZ/view?usp=drive_link",
+        "link" : "https://colab.research.google.com/drive/1P8bS5y-MS9XRw7V5V8FD5NFYNRGD4nHZ",
         "atividades": [
             {
                 "exercicios": [
@@ -157,7 +157,7 @@
                     },
                     {
                         "idExercicio": "T0303",
-                        "enunciado": "Complete o código abaixo.<br>___ condition:<br>&nbsp;&nbsp;#faz uma coisa<br>else:<br>&nbsp;&nbsp;#faz outra coisa",
+                        "enunciado": "Complete o código abaixo.<br>___ condition:<br>&nbsp;&nbsp;&nbsp;&nbsp;#faz uma coisa<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;#faz outra coisa",
                         "dificuldade": 0,
                         "tipo": 2,
                         "alternativas": [],
@@ -165,7 +165,7 @@
                     },
                     {
                         "idExercicio": "T0304",
-                        "enunciado": "No trecho de código a seguir, o else pode ser substituído por qual item?<br>if condition:<br>&nbsp;&nbsp;#faz uma coisa<br>else:<br>&nbsp;&nbsp;#faz outra coisa",
+                        "enunciado": "No trecho de código a seguir, o else pode ser substituído por qual item?<br>if condition:<br>&nbsp;&nbsp;&nbsp;&nbsp;#faz uma coisa<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;#faz outra coisa",
                         "dificuldade": 0,
                         "tipo": 0,
                         "alternativas": ["elif condition", "if not condition", "if !condition", "else if condition"],
@@ -181,7 +181,7 @@
                     },
                     {
                         "idExercicio": "T0306",
-                        "enunciado": "Qual a saída do código abaixo?<br>nota = 9<br>media = 7<br>if nota < media: <br>&nbsp;&nbsp;print(\"recuperação\")<br>elif nota > media and nota < 9:<br>&nbsp;&nbsp;print(\"aprovado\")<br>else:<br>&nbsp;&nbsp;print(\"nota excelente\")<br><br>Saída: ___",
+                        "enunciado": "Qual a saída do código abaixo?<br>nota=9<br>media=7<br>if nota < media:<br>&nbsp;&nbsp;print(\"recuperação\")<br>elif nota>media and nota<9:<br>&nbsp;&nbsp;print(\"aprovado\")<br>else:<br>&nbsp;&nbsp;print(\"nota excelente\")<br><br>Saída: ___",
                         "dificuldade": 0,
                         "tipo": 3,
                         "alternativas": ["recuperação", "aprovado", "nota excelente", "não aprovado"],
@@ -195,7 +195,7 @@
     {
         "nome": "Estruturas de Repetição",
         "descricao": "Permitem executar um bloco de código várias vezes, por um número pré-definido de vezes ou enquanto uma determinada condição for verdadeira, sendo eficientes ao automatizar tarefas repetitivas. As estruturas mais comuns são \"for\" e \"while\".",
-        "link" : "https://drive.google.com/file/d/1iY6jxNRqOPDvYLP0XbAQdSZV4EHyh3Yo/view?usp=drive_link",
+        "link" : "https://colab.research.google.com/drive/1iY6jxNRqOPDvYLP0XbAQdSZV4EHyh3Yo",
         "atividades": [
             {
                 "exercicios": [
@@ -233,7 +233,7 @@
                     },
                     {
                         "idExercicio": "T0405",
-                        "enunciado": "Qual a saída do código a seguir? Escreva os números separando-os por um espaço.<br>x=5<br>while x>0:<br>&nbsp;&nbsp;x-=1<br>&nbsp;&nbsp;print(x)<br><br>Saída: ___",
+                        "enunciado": "Qual a saída do código a seguir? Escreva os números separando-os por um espaço.<br>x=5<br>while x>0:<br>&nbsp;&nbsp;&nbsp;&nbsp;x-=1<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br><br>Saída: ___",
                         "dificuldade": 0,
                         "tipo": 2,
                         "alternativas": [],
@@ -241,7 +241,7 @@
                     },
                     {
                         "idExercicio": "T0406",
-                        "enunciado": "Qual a saída do código a seguir?<br>num=0<br>for num in range(6,0,-2):<br>&nbsp;&nbsp;print(num)",
+                        "enunciado": "Qual a saída do código a seguir?<br>num=0<br>for num in range(6,0,-2):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(num)",
                         "dificuldade": 0,
                         "tipo": 0,
                         "alternativas": ["0 2 4", "6 4 2", "6 4 2 0", "6 5 4 3 2 1", "2 4 6"],
@@ -329,7 +329,7 @@
                     },
                     {
                         "idExercicio": "T0602",
-                        "enunciado": "Complete o código abaixo para que \"funcao1\" seja considerada uma função.<br>___ funcao1():<br>&nbsp;&nbsp;print(\"Hello, World!\")",
+                        "enunciado": "Complete o código abaixo para que \"funcao1\" seja considerada uma função.<br>___ funcao1():<br>&nbsp;&nbsp;&nbsp;&nbsp;print(\"Hello, World!\")",
                         "dificuldade": 0,
                         "tipo": 2,
                         "alternativas": [],
@@ -337,7 +337,7 @@
                     },
                     {
                         "idExercicio": "T0603",
-                        "enunciado": "Dado o código a seguir, correlacione as duas colunas com base no que cada uma das palavras representa para a função.<br>def ehPar(num):<br>&nbsp;&nbsp;resultado = (num%2 == 0)<br>&nbsp;&nbsp;return resultado",
+                        "enunciado": "Dado o código a seguir, correlacione as duas colunas com base no que cada uma das palavras representa para a função.<br>def ehPar(num):<br>&nbsp;&nbsp;&nbsp;&nbsp;resultado = (num%2 == 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;return resultado",
                         "dificuldade": 0,
                         "tipo": 1,
                         "alternativas": ["def", "ehPar", "num", "resultado", "retorno da função", "parâmetro da função", "define a função", "nome da função"],
