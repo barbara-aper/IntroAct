@@ -11,7 +11,6 @@
 .footer-content {
     padding: 0 50px 0 50px;
 }
-
 .footer-content p, a{
     color: var(--super-dark-blue);
 }
@@ -21,12 +20,10 @@
     justify-content: left;
     justify-items: left;
 }
-
 .footer-nav a {
     text-decoration: none;
     margin-right: 20px;
 }
-
 .footer-nav a:hover {
     text-decoration: underline;
 }
