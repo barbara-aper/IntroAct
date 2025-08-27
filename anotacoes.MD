@@ -19,9 +19,7 @@ Classes:
 -- geral:
 1. Brb:
 2. Ray:
-3. Ammm: correcao final exercicio/nota 
+3. Ammm:
 
 -- video
 -- comentarios
--- revisar documentação e testes
--- cor diferente textos lacunas
