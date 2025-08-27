@@ -121,7 +121,7 @@ function exibeGabarito(){
 
     if(listaErros.length>0){
         const divGabarito = document.getElementById("divGabarito");
-        divGabarito.className += "card-exercicio";
+        divGabarito.className += " card-exercicio";
     
         let gabaritoTitulo = document.getElementById("gabaritoTitulo");
         let gabarito = document.getElementById("gabaritoExercicio");
@@ -133,8 +133,11 @@ function exibeGabarito(){
             let id = listaErros[i];
             let num = parseInt(id)+1;
             txtGabarito += "Exercício " + num + ":<br>Enunciado: ";
-            txtGabarito += listaExercicios[id].enunciado + "<br>Gabarito: ";
-            txtGabarito += listaExercicios[id].gabarito;
+            txtGabarito += listaExercicios[id].enunciado;
+            if(listaExercicios[id].tipo != "ESCRITA"){
+                txtGabarito += "<br>Alternativas: " + listaExercicios[id].alternativas;
+            }
+            txtGabarito += "<br>Gabarito: " + listaExercicios[id].gabarito;
             txtGabarito += "<br><br>";
         }
         gabarito.innerHTML = txtGabarito;

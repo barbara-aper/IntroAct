@@ -6,10 +6,12 @@
 
 /* Card sem uso até o momento */
 .card-exercicio {
+    max-width: 800px; /* Adjust this value as needed */
+    margin: auto auto;
     color: var(--white);
     position: relative;
     display: block;
-    padding: 10px 25px;
+    padding: 25px 25px;
     font-size: 17px;
     font-family: "Roboto Condensed", sans-serif;
     background-color: var(--dark-blue);
