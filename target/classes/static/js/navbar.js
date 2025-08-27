@@ -3,6 +3,7 @@ const pathname = window.location.pathname;
 
 console.log(pathname);
 
+// Destaca a cor da página em visualização
 if(pathname == '/index' || pathname == '/') navBarBtn[0].style.setProperty('color', '#f07e24', 'important');
 if(pathname == '/atividades') navBarBtn[1].style.setProperty('color', '#f07e24', 'important');
 if(pathname == '/faq') navBarBtn[2].style.setProperty('color', '#f07e24', 'important');

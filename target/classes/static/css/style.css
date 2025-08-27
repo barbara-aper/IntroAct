@@ -49,24 +49,3 @@ h1 {
 p {
     text-align: justify;
 }
-
-/* Input dos exercícios de escrita */ 
-.input-resposta {
-    background-color: var(--dark-orange);
-    border: none;
-    border-radius: 50px;
-    padding-left: 10px;
-    color: var(--white);
-}
-.input-resposta:focus {
-    outline: 2px solid var(--white)
-}
-.input-resposta::placeholder {
-    color: var(--white)
-}
-.flex-wrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-}

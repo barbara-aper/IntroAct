@@ -25,10 +25,12 @@
     overflow: hidden;
     transition-duration: .3s;
 }
+
 .socialContainer:hover {
     background-color: var(--orange);
     transition-duration: .3s;
 }
+
 .socialContainer:active {
     transform: scale(0.9);
     transition-duration: .3s;
@@ -54,14 +56,14 @@
 }
 
 @keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 

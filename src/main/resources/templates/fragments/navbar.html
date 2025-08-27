@@ -4,55 +4,49 @@
     <div th:fragment="navbar">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid p-0">
+
+                <!-- Logo do projeto -->
                 <a th:href="@{/index}">
                     <img class="img-fluid ms-5" style="width: 135px;" src="imagens\logoIntroAct.png" alt="Logo do IntroAct">
                 </a>
-
+                
+                <!-- Resposividade dos botoes -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- div com os links da navbar -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav justify-content-evenly" id="navbar-buttons">
                         <li class="nav-item">
-                            <a class="nav-link active" 
-                               th:href="@{/index}"
-                               id="pagina inicial"
-                               >PÁGINA INICIAL
+                            <a class="nav-link active" th:href="@{/index}"id="pagina inicial">
+                                PÁGINA INICIAL
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                               th:href="@{/atividades}"
-                               id="atividades">
+                            <a class="nav-link" th:href="@{/atividades}" id="atividades">
                                ATIVIDADES
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                               th:href="@{/faq}"
-                               id="faq">
+                            <a class="nav-link" th:href="@{/faq}" id="faq">
                                FAQ
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                               th:href="@{/contato}"
-                               id="contatos">
+                            <a class="nav-link" th:href="@{/contato}" id="contatos">
                                CONTATO
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"
-                               href="https://introcomp.pet.inf.ufes.br/" 
-                               target="_blank"
-                               id="introCompLogo">
+                            <a class="nav-link" href="https://introcomp.pet.inf.ufes.br/"  target="_blank" id="introCompLogo">
                                INTRO<span style="font-weight: bold">COMP</span>
                             </a>
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
         <script th:src="@{/js/navbar.js}"></script>

@@ -30,28 +30,36 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid p-1 position-relative">
             
+            <!-- Botao de voltar -->
            <a th:href="@{/atividades}" class="position-absolute start-0 ms-3">
                 <i class="bi bi-arrow-left fs-4 ms-5" style="color: var(--white);"></i>
             </a>
 
+            <!-- Nome do tema na navbar -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <h3 class="text-center m-0" style="color: var(--white);" th:text="${atividade.tema}"></h3>
             </div>
 
+            <!-- Logo na navbar -->
             <a th:href="@{/index}" class="navbar-brand position-absolute end-0 me-5 d-none d-lg-block">
                 <img class="img-fluid" style="width: 135px;" th:src="@{/imagens/logoIntroAct.png}" alt="Logo do IntroAct">
             </a>
-
+            
+            <!-- Resposividade dos botoes -->
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             </button>
         </div>
     </nav>
+
     <main class="flex-grow-1 d-flex flex-column justify-content-center">
         <div class="d-flex justify-content-center">
             <div>
-                <p class="lead my-4" id="enunciadoExercicio" style="color: var(--white);"> </p>
 
+                <!-- Enunciado do exercicio -->
+                <p class="lead my-4" id="enunciadoExercicio" style="color: var(--white); font-size: 22px;"> </p>
+
+                <!-- Botoes de atividades -->
                 <div class="text-center container-alternativas" style="margin: 1%;">    
                     <ul class="botoes-atividades list-unstyled" id="alternativas"></ul>
                     <ul class="botoes-atividades list-unstyled" id="alternativas2"></ul>
@@ -60,6 +68,7 @@
         </div>
     </div>
     
+    <!-- Botao de proximo exercicio -->
     <div class="d-flex justify-content-center" id="next-exercise-div" style="margin: 1%;">
         <button class="small-btn" id="next-exercise-btn">
             <label class="text-white"> Próximo exercício </label>

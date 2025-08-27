@@ -11,6 +11,7 @@
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
+
 .smaller-btn:hover {
     padding: 3px 8px;
     background-color: var(--dark-orange);
@@ -34,6 +35,7 @@
     font-family: "Roboto Condensed", sans-serif;
     cursor: pointer;
 }
+
 .small-btn:hover {
     background-color: var(--hover-color);
     position: relative;
@@ -57,7 +59,6 @@
     transition: all 0.1s;
     overflow: hidden;
 }
-
 
 /** Área do botão das atividades */
 .botoes-atividades {
@@ -89,15 +90,18 @@
     font-family: "Roboto Condensed", sans-serif;
     cursor: pointer;
 }
+
 .animated-button:hover {
     background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }
+
 .animated-button:active {
         position: relative;
     top: 2px;
 }
+
 .animated-button.used {
     border: 1px solid var(--light-orange) !important; 
     background-color: #c26018 !important;
@@ -124,15 +128,18 @@
     font-family: "Roboto Condensed", sans-serif;
     cursor: pointer;
 }
+
 .animated-button-yellow:hover {
     background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }
+
 .animated-button-yellow:active {
         position: relative;
     top: 2px;
 }
+
 .animated-button-yellow.used {
     border: 1px solid var(--light-yellow) !important; 
     background-color: #deb607 !important;
@@ -164,11 +171,13 @@
     align-items: center;    /* centraliza na vertical */
     text-align: center;     /* garante centralização do texto */
 }
+
 .lacuna-button:hover {
     background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }
+
 .lacuna-button.used {
     border: 1px solid var(--light-orange) !important; 
     background-color: #c26018 !important;
@@ -185,12 +194,14 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .wrapper {
     list-style: none;
     display: flex;
     gap: 10px;
     padding: 0;
 }
+
 .tooltip {
     color: white;
     font-size: 1.2em;
