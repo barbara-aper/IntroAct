@@ -4,6 +4,7 @@
     margin: 0 20px 0 20px; /* Adiciona um espaço entre as listas */
 }
 
+/* Card sem uso até o momento */
 .card-exercicio {
     color: var(--white);
     position: relative;
@@ -14,10 +15,4 @@
     background-color: var(--dark-blue);
     border-radius: 20px;
     overflow: hidden;
-}
-
-.exercicios-container {
-    background-color: var(--dark-orange);
-    padding: 15px 15px 0px 15px;
-    border-radius: 15px;
 }

@@ -1,32 +1,31 @@
-/* background da navbar */
+/* Background da navbar */
 .navbar {
     background-color : var(--dark-blue) !important;
 }
 
-/* bloco com tds os txt da navbar */
+/* Bloco com todos os links da navbar */
 .navbar-nav {
     margin: auto;
     width: 50%
 }
-/* introact */
+
+/* Logo IntroAct */
 .navbar-brand {
     color: var(--orange);
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-/* palavras da navbar */
+/* Links de navegação */
 .nav-link {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: normal;
     color: var(--white) !important;
     transition: color 0.3s ease;
 }
-
 .nav-link:hover {
     color: var(--orange) !important;
 }
-
 .nav-link:active {
     color: var(--orange) !important;
 }

@@ -1,5 +1,5 @@
-/** --------------------------------------------------------- */
-/** Botao do index.html */
+
+/** Comece agora e Próximo exercício*/
 .smaller-btn{
     padding: 5px 10px;
     border: 0;
@@ -11,14 +11,12 @@
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
-
 .smaller-btn:hover {
     padding: 3px 8px;
     background-color: var(--dark-orange);
 }
 
-/** --------------------------------------------------------- */
-/** Small */
+/** Botão redondinho dos números de atividades e exercícios */
 .small-btn{
     --primary-color: var(--blue);
     --secondary-color: var(--white);
@@ -42,8 +40,7 @@
     top: 2px;
 }
 
-/** --------------------------------------------------------- */
-/** Botao grande */
+/** Card do FAQ */
 .big-btn {
     color: var(--white);
     width: 70vh;
@@ -61,8 +58,8 @@
     overflow: hidden;
 }
 
-/** --------------------------------------------------------- */
-/** area do botao das atividades */
+
+/** Área do botão das atividades */
 .botoes-atividades {
     display: flex;
     flex-direction: column;
@@ -73,6 +70,7 @@
     gap: 10px;
 }
 
+/** Atividades e alternativas */
 .animated-button {
     width: 70vh;
     --primary-color: var(--dark-orange);
@@ -91,19 +89,15 @@
     font-family: "Roboto Condensed", sans-serif;
     cursor: pointer;
 }
-
-/** animacao de quando passa o mouse em cima */
 .animated-button:hover {
     background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }
-
 .animated-button:active {
         position: relative;
     top: 2px;
 }
-
 .animated-button.used {
     border: 1px solid var(--light-orange) !important; 
     background-color: #c26018 !important;
@@ -111,6 +105,7 @@
     opacity: 0.5;
 }
 
+/** Alternativas de correlação*/
 .animated-button-yellow {
     width: 70vh;
     --primary-color: var(--dark-yellow);
@@ -129,19 +124,15 @@
     font-family: "Roboto Condensed", sans-serif;
     cursor: pointer;
 }
-
-/** animacao de quando passa o mouse em cima */
 .animated-button-yellow:hover {
     background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }
-
 .animated-button-yellow:active {
         position: relative;
     top: 2px;
 }
-
 .animated-button-yellow.used {
     border: 1px solid var(--light-yellow) !important; 
     background-color: #deb607 !important;
@@ -149,8 +140,7 @@
     opacity: 0.5;
 }
 
-/** --------------------------------------------------------- */
-/** Lacuna  */
+/** Preenchimento de lacunas (botões de formato dinâmico) */
 .lacuna-button {
     --primary-color: var(--dark-orange);
     --secondary-color: var(--white);
@@ -174,15 +164,11 @@
     align-items: center;    /* centraliza na vertical */
     text-align: center;     /* garante centralização do texto */
 }
-
-
-/** animacao de quando passa o mouse em cima */
 .lacuna-button:hover {
     background-color: var(--hover-color);
     position: relative;
     top: 2px;
 }
-
 .lacuna-button.used {
     border: 1px solid var(--light-orange) !important; 
     background-color: #c26018 !important;
@@ -190,8 +176,7 @@
     opacity: 0.5;
 }
 
-/** --------------------------------------------------------- */
-/** area q abre qnd clica no botao */   
+/** Aréa das informações das atividades */   
 .area-collapse-custom {
     width: 85%;
     max-width: 700px;
@@ -200,14 +185,12 @@
     margin-left: auto;
     margin-right: auto;
 }
-
 .wrapper {
     list-style: none;
     display: flex;
     gap: 10px;
     padding: 0;
 }
-
 .tooltip {
     color: white;
     font-size: 1.2em;

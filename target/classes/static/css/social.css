@@ -2,27 +2,22 @@
 .card {
     width: 65vh;
     height: fit-content;
-
     border: none;
     background: var(--white);
     display: flex;
-    
     align-items: center;
     justify-content: center;
     gap: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);  
 }
 
-/* for all social containers*/
+/* Botões da tela de Contato*/
 .socialContainer {
-    border: 2px solid var(--light-blue);
-    border-radius: 10px;
-
+    border-radius: 20px;
     width: 220px;
-    height: 40px;
+    height: 35px;
     padding-left: 10px;
     margin: 10px;
-
     background-color: var(--blue);
     display: flex;
     align-items: center;
@@ -30,12 +25,10 @@
     overflow: hidden;
     transition-duration: .3s;
 }
-
 .socialContainer:hover {
     background-color: var(--orange);
     transition-duration: .3s;
 }
-
 .socialContainer:active {
     transform: scale(0.9);
     transition-duration: .3s;
