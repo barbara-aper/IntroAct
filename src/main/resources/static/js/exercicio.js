@@ -1,8 +1,9 @@
-// Funções e lógica do exercício
+//exibe as alternativas na tela de exercícios
 function atualizaTelaExercicio(listaExercicios, idEx) {
     const alternativasList = document.getElementById("alternativas");
     const alternativas2List = document.getElementById("alternativas2");
-
+    
+    //adiciona as alternativas em botões
     if (listaExercicios[idEx].tipo == "MULTIPLA_ESCOLHA") {
         const alternativasText = listaExercicios[idEx].alternativas;
         alternativasText.forEach(alternativa => {
@@ -13,6 +14,7 @@ function atualizaTelaExercicio(listaExercicios, idEx) {
         });
     }
 
+    //adiciona as alternativas em botões em duas colunas diferentes
     if (listaExercicios[idEx].tipo == "CORRELACAO") {
         const alternativasText = listaExercicios[idEx].alternativas;
         const tamanho = alternativasText.length;
@@ -31,13 +33,11 @@ function atualizaTelaExercicio(listaExercicios, idEx) {
             const itemAlternativa = document.createElement("li");
             itemAlternativa.className += "animated-button-yellow";
             itemAlternativa.textContent = alternativasText[i];
-            //itemAlternativa.style.backgroundColor = '#f4c708';
-            //itemAlternativa.style.border = '1px solid #f7e077';
-            //itemAlternativa.style.setProperty('--hover-color', "#deb607", "important");
             alternativas2List.appendChild(itemAlternativa);
         }
     }
 
+    //adiciona as alternativas em botões
     if (listaExercicios[idEx].tipo == "PREENCHIMENTO_DE_LACUNAS"){
         const alternativasText = listaExercicios[idEx].alternativas;
         const tamanho = alternativasText.length;
@@ -58,6 +58,7 @@ function atualizaTelaExercicio(listaExercicios, idEx) {
     }
 }
 
+//limpa a tela de exercício para receber um próximo
 function limpaTelaExercicio() {
     const alternativasList = document.getElementById("alternativas");
     alternativasList.replaceChildren();
@@ -70,44 +71,40 @@ function limpaTelaExercicio() {
     idAlternativa = 0;
 }
 
+//confere se a resposta enviada está igual ao gabarito
 function confereResposta(respostaAluno, gabarito, tipo) {
     let respostaCorreta = true;
     console.log(respostaAluno);
-    if (tipo == "MULTIPLA_ESCOLHA") { //acho que esse ta igual ao else
-        if (respostaAluno.length !== gabarito.length) return false;
-        respostaAluno.forEach(resposta => {
-            if (gabarito.includes(resposta) == false) {
+
+    if(tipo == 'ESCRITA'){
+        escritaInput = document.getElementsByClassName("input-resposta");
+        console.log(escritaInput);
+        for (let input of escritaInput){
+            respostaAluno.push(input.value);
+        }
+    }
+
+    if (respostaAluno.length != gabarito.length) {
+        respostaCorreta = false;
+    }
+    else{
+        for (let i = 0; i < respostaAluno.length; i++) {
+            if (respostaAluno[i] != gabarito[i]) {
                 respostaCorreta = false;
             }
-        });
-        return respostaCorreta;
-    } else { // CORRELACAO, LACUNA E ESCRITA
-        if(tipo == 'ESCRITA'){
-            escritaInput = document.getElementsByClassName("input-resposta");
-            console.log(escritaInput);
-            for (let input of escritaInput){
-                respostaAluno.push(input.value);
-            }
         }
-        if (respostaAluno.length != gabarito.length) {
-            respostaCorreta = false;
-        } else {
-            for (let i = 0; i < respostaAluno.length; i++) {
-                if (respostaAluno[i] != gabarito[i]) {
-                    respostaCorreta = false;
-                }
-            }
-        }
-        return respostaCorreta;
     }
+
+    return respostaCorreta;
 }
 
+//insere o enunciado na tela
 function insereEnunciado(){
-    if(listaExercicios[idEx].tipo == 'ESCRITA'){
+    if(listaExercicios[idEx].tipo == 'ESCRITA'){ //trata a existencia de input
         enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<input type="text" class="input-resposta" placeholder="Digite aqui sua resposta">`); //3 underscore como input texto
         titulo.innerHTML = enunciado;
     }
-    else if(listaExercicios[idEx].tipo == 'PREENCHIMENTO_DE_LACUNAS'){
+    else if(listaExercicios[idEx].tipo == 'PREENCHIMENTO_DE_LACUNAS'){ //trata a existencia de espaço para lacunas
         enunciado = listaExercicios[idEx].enunciado.replaceAll(/___/g, `<span class="lacuna"></span>`); //3 underscore como espaço vazio
         titulo.innerHTML = enunciado;
         lacunas = document.getElementsByClassName("lacuna");
@@ -139,6 +136,7 @@ botoesExercicios[idEx].style.backgroundColor = '#f4c708';
 atualizaTelaExercicio(listaExercicios, idEx);
 
 // --- Event Listeners ---
+//clique na alternativa comum (= coluna 1 de alternativas)
 document.getElementById('alternativas').addEventListener('click', function (event) {
     const alternativaClick = event.target;
     if (listaExercicios[idEx].tipo == "MULTIPLA_ESCOLHA") {
@@ -168,6 +166,7 @@ document.getElementById('alternativas').addEventListener('click', function (even
     }
 });
 
+//clique na alternativa de correlação ou lacuna (= coluna 2 de alternativas)
 document.getElementById('alternativas2').addEventListener('click', function (event) {
     const alternativaClick = event.target;
     if(listaExercicios[idEx].tipo == "CORRELACAO"){
@@ -200,16 +199,19 @@ document.getElementById('alternativas2').addEventListener('click', function (eve
     }
 });
 
+//clique para próximo exercício
 document.getElementById('next-exercise-btn').addEventListener('click', function () {
+    //muda cor de bolinha do exercício com base em acerto ou erro
     if (confereResposta(respostaAluno, listaExercicios[idEx].gabarito, listaExercicios[idEx].tipo)) {
         botoesExercicios[idEx].style.backgroundColor = '#32a155';
-    } else {
+    } 
+    else {
         botoesExercicios[idEx].style.backgroundColor = '#f2351f';
     }
+    //verifica se há um próximo exercício e o exibe caso exista
     if (idEx + 1 != qtdExercicios) {
         limpaTelaExercicio();
         idEx++;
-        //enunciado
         insereEnunciado();
         botoesExercicios[idEx].style.backgroundColor = '#f4c708';
         atualizaTelaExercicio(listaExercicios, idEx);

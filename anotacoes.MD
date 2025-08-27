@@ -16,15 +16,12 @@ Classes:
 - Classes do thymeleaf e outros
 
 # to do
--- geral: tela do exercicio
-1. Brb: footer(redes sociais) + terminar index
-2. Ray: contatos + faq + testes
+-- geral:
+1. Brb:
+2. Ray:
 3. Ammm: correcao final exercicio/nota 
 
--- tema com duas atividades
--- link do notebook (tema)
--- substituir os txt lorem ipsum com algo real (contato, index)
--- fotos de vdd
--- espalhar logo introact pelas paginas
--- slides apresentação
 -- video
+-- comentarios
+-- revisar documentação e testes
+-- cor diferente textos lacunas

@@ -74,7 +74,7 @@
     },
     {
         "nome": "Lógica Booleana",
-        "descricao": "Lógica Booleana é crucial para a tomada de decisões na programação, sobretudo ao comparar valores com os operadores >, <. >=, <=, ==, !=, and, or e not. Essas comparações resultam em valores booleanos True e False.",
+        "descricao": "Lógica Booleana é crucial para a tomada de decisões na programação, sobretudo ao comparar valores com os operadores >, <, >=, <=, ==, !=, and, or e not. Essas comparações resultam em valores booleanos True e False.",
         "link" : "https://colab.research.google.com/drive/1oVMbw1itQxF38FoxZMcVxSwRxWnbz6cw?usp=drive_link",
         "atividades": [
             {
@@ -254,7 +254,7 @@
     },
     {
         "nome": "Listas",
-        "descricao": "A lista é uma coleção de itens ordenada, mutável e heterogénea, delimitada por colchetes []. Elas permitem acessar, adicionar e remover elementos através de índices numéricos, a partir do 0. São usadas para agrupar múltiplos dados numa única variável.",
+        "descricao": "A lista é uma coleção de itens ordenada, mutável e heterogénea, delimitada por colchetes [ ]. Elas permitem acessar, adicionar e remover elementos através de índices numéricos, a partir do 0. São usadas para agrupar múltiplos dados numa única variável.",
         "link" : "https://colab.research.google.com/drive/1okZBCeVG-E8hoOR_q4zb-HclF74X3NCv?usp=drive_link",
         "atividades": [
             {
