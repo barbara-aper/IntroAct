@@ -3,7 +3,7 @@ run:
 	mvn spring-boot:run
 
 # abre a pagina web do projeto
-opsys:
+oppage:
 	xdg-open http://localhost:8080/ &
 	clear
 
