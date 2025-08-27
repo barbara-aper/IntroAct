@@ -81,7 +81,7 @@ make run
 ```
 Para abrir a página web do projeto:
 ```
-make opsys
+make oppage
 ```
 Para gerar a documentação do projeto:
 ```
