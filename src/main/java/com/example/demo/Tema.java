@@ -39,6 +39,10 @@ public class Tema {
         this.descricao = descricao;
     }
 
+    /**
+     * Define link para o tema.
+     * @param link link para o tema.
+     */
     public void setLink(String link) {
         this.link = link;
     }
@@ -60,36 +64,40 @@ public class Tema {
     }
 
     /**
-     * Obtem o id de um objeto especifico tema
-     * @return o id do objeto
+     * Obtem o id de um objeto especifico tema.
+     * @return o id do objeto.
      */
     public Long getId() {
         return this.id;
     }
     
     /**
-     * Obtem o nome do tema
-     * @return nome do tema
+     * Obtem o nome do tema.
+     * @return nome do tema.
      */
     public String getNome() {
         return this.nome;
     }
 
     /**
-     * Obtem a descrição do tema
-     * @return descrição do tema
+     * Obtem a descrição do tema.
+     * @return descrição do tema.
      */
     public String getDescricao() {
         return this.descricao;
     }
 
+     /**
+     * Obtem o link do collab para o tema especifico.
+     * @return link do tema.
+     */
     public String getLink() {
         return this.link;
     }
 
     /**
-     * Obtem as atividades do tema
-     * @return lista de atividades do tema
+     * Obtem as atividades do tema.
+     * @return lista de atividades do tema.
      */
     public List<Atividade> getAtividades() {
         return this.atividades;
