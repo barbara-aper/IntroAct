@@ -75,6 +75,15 @@ mvn test
 ## Makefile
 Para facilitar a execução e funcionamento do sistema, alguns comandos bastante utilizados foram salvos no Makefile.
 
+Primeiramente, lembre-se de instalar o Makefile em seu computador.
+
+Para Linux, execute em seu terminal:
+```
+sudo apt-get install make
+```
+Uma vez que o Makefile já está instalado, você pode executar os comandos abaixo.
+
+
 Para executar o sistema:
 ```
 make run
@@ -100,4 +109,5 @@ make test
 1. [Figma](https://www.figma.com/design/9x6Vid5HhN2tHv1BTIix64/IntroAct?node-id=0-1&p=f)
 2. [Proposta de Projeto](https://docs.google.com/document/d/1AbIpTwdoQhO9LcvEFK6X2nOIlPTqKL4j0UVvDhPbMDU/edit?tab=t.0)
 3. [Github do projeto](https://github.com/barbara-aper/IntroAct)
-4. [Página local de testes](http://localhost:8080/)
+4. [Vídeo sobre o projeto](https://youtu.be/CIqxZ7M_rS0)
+5. [Página local de testes](http://localhost:8080/)
